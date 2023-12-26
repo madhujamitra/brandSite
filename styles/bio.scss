@@ -1,7 +1,6 @@
 @import './partiales/variable/variable.scss';
 
 * {
-
   margin: 0px;
   padding: 0;
   box-sizing: border-box;
@@ -22,7 +21,7 @@
 
   &__header {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 300;
     text-decoration: none;
     color: $fornt-color;
   }
@@ -42,10 +41,10 @@
     text-decoration: none;
     position: relative;
     padding-bottom: 19px;
+    font-size: 14px;
+    font-weight: 300;
 
     &:hover {
-      // color: #aaa; 
-      // text-decoration: underline;
       border-bottom: 2px solid white;
       padding-bottom: 27px;
     }
@@ -68,15 +67,26 @@
 }
 
 .banner {
-  background-image: url(../assets/Images/hero-bio.jpg);
+  background-image: url('../assets/Images/hero-bio.jpg'); 
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-bottom: 10%;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+&__header{
+  color: white;
+  padding-left: 80px;
+  font-size: 60px;
+  font-weight: 400;
+  }
+ 
 }
+
+
+
 
 .photo__image {
 
@@ -129,23 +139,27 @@
 
   &__image {
     width: 100%;
-    max-width: 800px;
+    min-width: 80vh;
     height: auto;
     margin-bottom: 1.5rem;
   }
 
   &__text {
-    font-size: 1rem;
-    color: #666;
+    font-size: 24px;
+    color: #333;
     margin-bottom: 1rem;
     line-height: 1.6;
+    text-align: left;
+    
 
     &__2 {
       display: block;
       text-align: left;
       color: #333;
-      font-style: italic;
-      margin-top: 0.5rem;
+      font-size: 14px;
+      font-weight: 600;
+
+      margin-top: 0.7rem;
     }
   }
 }
@@ -193,24 +207,37 @@
 
     &__heading{
       font-size: 36px;
-    color: #333;
-    margin-bottom: 1.5rem;
-    font-weight: 400;
-    margin-top: 1.5rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+      margin-top: 1.5rem;
+      padding-left: 80px;
     }
 }
 .main__para__section{
   text-align: center;
-  max-width: 800px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 60px;
 }
 
-
+// footer
 .footer {
   background: #000;
-  color: #fff; 
-  padding: 2rem 0; 
+  color: #fff;
+  padding: 2rem 0;
+  padding-left: 80px;
+  padding-right: 80px;
+  
 
-  &__title{
+  &__part{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+  }
+
+  &__title {
     text-align: left;
     font-size: 36px;
     font-weight: 400;
@@ -223,13 +250,19 @@
     align-items: flex-start;
 
     &:last-child {
-      margin-bottom: 0; 
+      margin-bottom: 0;
     }
-    &__social{
+
+    &__social {
       display: flex;
-    justify-content: space-evenly;
-    gap: 20px;
-    align-items: flex-end;
+      justify-content: space-evenly;
+      gap: 63px;
+      align-items: center;
+    }
+    &___text{
+      font-size: 24px;
+      font-weight: 300;
+  
     }
 
   }
@@ -237,28 +270,52 @@
 
   &__contact-icons {
     display: flex;
-    gap: 3rem; 
+    gap: 3rem;
 
     &__icon {
-      height: 1.5rem; 
+      height: 1.5rem;
       width: auto;
       transition: opacity 0.3s ease;
 
-      &:hover {
-        opacity: 0.7;
+   
+    }
+    &__value{
+      min-height: 12px;
+    height: 25px;
+    }
+
+  }
+
+
+
+  
+
+
+  &__contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 63px;
+    padding-top: 40px;
+
+    &__value {
+      margin-bottom: 2rem; 
+
+      &:last-child {
+        margin-bottom: 0; 
       }
     }
-  }
-
-  &__contact-info {
-    &__name, &__address, &__email {
-      margin-bottom: 0.5rem; 
+    &__text{
+      font-size: 14px;
+      font-weight: 300;
+      span{
+      display: block;
     }
   }
-
-  &__brand, &__copyright {
-    text-align: center;
-    width: 100%;
+  &__alig{
+    padding-bottom: 20px;
   }
-}
 
+}
+  }

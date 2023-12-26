@@ -18,7 +18,7 @@
 }
 .navbar__header {
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 300;
   text-decoration: none;
   color: #FAFAFA;
 }
@@ -35,6 +35,8 @@
   text-decoration: none;
   position: relative;
   padding-bottom: 19px;
+  font-size: 14px;
+  font-weight: 300;
 }
 .navbar__link:hover {
   border-bottom: 2px solid white;
@@ -52,14 +54,21 @@
 }
 
 .banner {
-  background-image: url(../assets/Images/hero-bio.jpg);
+  background-image: url("../assets/Images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width: 100%;
+  min-height: 60vh;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-bottom: 10%;
+  align-items: center;
+  text-align: center;
+}
+.banner__header {
+  color: white;
+  padding-left: 80px;
+  font-size: 60px;
+  font-weight: 400;
 }
 
 .photo__image__header {
@@ -96,22 +105,24 @@
 }
 .image__para__image {
   width: 100%;
-  max-width: 800px;
+  min-width: 80vh;
   height: auto;
   margin-bottom: 1.5rem;
 }
 .image__para__text {
-  font-size: 1rem;
-  color: #666;
+  font-size: 24px;
+  color: #333;
   margin-bottom: 1rem;
   line-height: 1.6;
+  text-align: left;
 }
 .image__para__text__2 {
   display: block;
   text-align: left;
   color: #333;
-  font-style: italic;
-  margin-top: 0.5rem;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 0.7rem;
 }
 
 .band__info {
@@ -151,19 +162,29 @@
   font-size: 36px;
   color: #333;
   margin-bottom: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 1.5rem;
+  padding-left: 80px;
 }
 
 .main__para__section {
   text-align: center;
-  max-width: 800px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 60px;
 }
 
 .footer {
   background: #000;
   color: #fff;
   padding: 2rem 0;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.footer__part {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .footer__title {
   text-align: left;
@@ -182,8 +203,12 @@
 .footer__section__social {
   display: flex;
   justify-content: space-evenly;
-  gap: 20px;
-  align-items: flex-end;
+  gap: 63px;
+  align-items: center;
+}
+.footer__section___text {
+  font-size: 24px;
+  font-weight: 300;
 }
 .footer__contact-icons {
   display: flex;
@@ -194,13 +219,31 @@
   width: auto;
   transition: opacity 0.3s ease;
 }
-.footer__contact-icons__icon:hover {
-  opacity: 0.7;
+.footer__contact-icons__value {
+  min-height: 12px;
+  height: 25px;
 }
-.footer__contact-info__name, .footer__contact-info__address, .footer__contact-info__email {
-  margin-bottom: 0.5rem;
+.footer__contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 63px;
+  padding-top: 40px;
 }
-.footer__brand, .footer__copyright {
-  text-align: center;
-  width: 100%;
+.footer__contact__value {
+  margin-bottom: 2rem;
+}
+.footer__contact__value:last-child {
+  margin-bottom: 0;
+}
+.footer__contact__text {
+  font-size: 14px;
+  font-weight: 300;
+}
+.footer__contact__text span {
+  display: block;
+}
+.footer__contact__alig {
+  padding-bottom: 20px;
 }/*# sourceMappingURL=bio.css.map */
