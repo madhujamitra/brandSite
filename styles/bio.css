@@ -6,7 +6,7 @@
 }
 
 .navbar {
-  color: #FAFAFA;
+  color: #FFFFFF;
   background-color: #323232;
   display: flex;
   flex-direction: row;
@@ -20,7 +20,7 @@
   font-size: 24px;
   font-weight: 300;
   text-decoration: none;
-  color: #FAFAFA;
+  color: #FFFFFF;
 }
 .navbar__list {
   list-style: none;
@@ -31,7 +31,7 @@
   margin-left: 2rem;
 }
 .navbar__link {
-  color: white;
+  color: #FFFFFF;
   text-decoration: none;
   position: relative;
   padding-bottom: 19px;
@@ -39,7 +39,7 @@
   font-weight: 300;
 }
 .navbar__link:hover {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #FFFFFF;
   padding-bottom: 27px;
 }
 .navbar__link--active::after {
@@ -49,7 +49,7 @@
   right: 0;
   bottom: -10px;
   height: 2px;
-  background-color: white;
+  background-color: #FFFFFF;
   width: auto;
 }
 
@@ -65,7 +65,7 @@
   text-align: center;
 }
 .banner__header {
-  color: white;
+  color: #FFFFFF;
   padding-left: 80px;
   font-size: 60px;
   font-weight: 400;
@@ -99,7 +99,7 @@
 }
 .image__para__heading {
   font-size: 2.5rem;
-  color: #333;
+  color: #323232;
   margin-bottom: 2rem;
   text-align: left;
 }
@@ -111,7 +111,7 @@
 }
 .image__para__text {
   font-size: 24px;
-  color: #333;
+  color: #323232;
   margin-bottom: 1rem;
   line-height: 1.6;
   text-align: left;
@@ -119,7 +119,7 @@
 .image__para__text__2 {
   display: block;
   text-align: left;
-  color: #333;
+  color: #323232;
   font-size: 14px;
   font-weight: 600;
   margin-top: 0.7rem;
@@ -131,7 +131,7 @@
 }
 .band__info__heading {
   font-size: 24px;
-  color: #333;
+  color: #323232;
   margin-bottom: 0.8rem;
   text-align: left;
   font-weight: 400;
@@ -144,7 +144,7 @@
 }
 .band__info__text {
   font-size: 14px;
-  color: #666;
+  color: #323232;
   line-height: 1.6;
   text-align: left;
 }
@@ -160,7 +160,7 @@
 }
 .main__para__heading {
   font-size: 36px;
-  color: #333;
+  color: #323232;
   margin-bottom: 1.5rem;
   font-weight: 500;
   margin-top: 1.5rem;
@@ -175,8 +175,8 @@
 }
 
 .footer {
-  background: #000;
-  color: #fff;
+  background: #323232;
+  color: #FFFFFF;
   padding: 2rem 0;
   padding-left: 80px;
   padding-right: 80px;
