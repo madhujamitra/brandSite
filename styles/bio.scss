@@ -20,21 +20,38 @@
   padding: 1.5rem 5.8rem;
   gap: 1.5rem;
 
+  @include respond-to('phone') {
+    justify-content: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
+
+
   &__header {
     font-size: 24px;
     font-weight: 300;
     text-decoration: none;
     color: $White;
+    @include respond-to('phone') {
+      font-size: 36px;
+    }
   }
 
   &__list {
-    list-style: none;
-    display: flex;
-    padding: 0;
+    @include respond-to('phone') {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+  
+    }
   }
 
   &__item {
     margin-left: 2rem;
+    @include respond-to('phone') {
+      // margin-right: 2rem;
+    }
   }
 
   &__link {
@@ -44,6 +61,12 @@
     padding-bottom: 19px;
     font-size: 14px;
     font-weight: 300;
+    @include respond-to('phone') {
+      padding-bottom: 15px;
+      padding-left: 25%;
+      padding-right: 25%;
+      margin-left: 0px;
+    }
 
     &:hover {
       border-bottom: 2px solid $White;
@@ -62,6 +85,9 @@
     height: 2px;
     background-color: $White;
     width: auto;
+    @include respond-to('phone') {
+      bottom: -1px;
+    }
   }
 
 
@@ -84,6 +110,11 @@
   padding-left: 80px;
   font-size: 60px;
   font-weight: 400;
+
+  @include respond-to('phone') {
+    font-size: 36px;
+    padding-left: 16px;
+  }
   }
  
 }
@@ -99,13 +130,24 @@
     color: #333;
     margin-bottom: 2rem;
     font-weight: 400;
+    @include respond-to('phone'){
+      padding-left: 16px;
+      padding-right: 16px;
   }
+    }
+  
 
   &__alig {
     display: flex;
     flex-wrap: wrap;
     
     gap: 1rem;
+    @include respond-to('phone'){
+      padding-left: 16px;
+    padding-right: 16px;
+    flex-direction: column;
+    padding-bottom: 24px;
+  }
 
   }
 
@@ -119,6 +161,10 @@
     &:hover {
       transform: scale(1.03);
     }
+    @include respond-to('phone'){
+      max-width: calc(100%);
+  }
+
 
   }
 
@@ -132,6 +178,11 @@
   // max-width: 800px; 
   margin: auto;
   padding: 1rem 5rem;
+  @include respond-to ('phone'){
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 0px;
+  }
 
   &__heading {
     font-size: 2.5rem;
@@ -142,9 +193,12 @@
 
   &__image {
     width: 100%;
-    min-width: 80vh;
+    min-width: 85vh;
     height: auto;
     margin-bottom: 1.5rem;
+    // @include respond-to('phone'){
+    //   min-width: 85vh;
+    // }
   }
 
   &__text {
@@ -163,6 +217,11 @@
       font-weight: 600;
 
       margin-top: 0.7rem;
+      @include respond-to('phone'){
+        font-size: 24px;
+    font-weight: 400;
+
+      }
     }
   }
 }
@@ -170,6 +229,11 @@
   // max-width: 800px;
   margin: auto;
   padding: 1rem 5rem;
+  @include respond-to('phone'){
+    padding-left: 16px;
+    padding-right: 16px;
+
+  }
 
   &__heading {
     font-size: 24px;
@@ -177,6 +241,9 @@
     margin-bottom: .8rem;
     text-align: left;
     font-weight: 400;
+    @include respond-to('phone'){
+      font-weight: 300;
+    }
   }
 
   &__content {
@@ -185,6 +252,9 @@
     padding: 1rem 0;
     display: flex;
     gap: 14px  ;
+    @include respond-to('phone'){
+      flex-direction: column;
+    }
 
   }
 
@@ -215,6 +285,13 @@
       font-weight: 500;
       margin-top: 1.5rem;
       padding-left: 80px;
+
+      @include respond-to('phone'){
+        padding-left: 16px;
+        padding-top: 24px;
+        padding-bottom: 16px;
+        margin: 0px;
+      }
     }
 }
 .main__para__section{
@@ -222,6 +299,12 @@
   padding-left: 80px;
   padding-right: 80px;
   padding-bottom: 60px;
+  @include respond-to('phone'){
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px
+  }
+
 }
 
 // footer
@@ -231,6 +314,11 @@
   padding: 2rem 0;
   padding-left: 80px;
   padding-right: 80px;
+  @include respond-to('phone'){
+    padding-left: 16px;
+    padding-right: 16px;
+}
+  
   
 
   &__part{
@@ -261,6 +349,11 @@
       justify-content: space-evenly;
       gap: 63px;
       align-items: center;
+      @include respond-to('phone'){
+        flex-direction: column;
+        gap: 24px;
+        align-items: normal;
+    }
     }
     &___text{
       font-size: 24px;
@@ -285,6 +378,10 @@
     &__value{
       min-height: 12px;
     height: 25px;
+    @include respond-to('phone'){
+      min-width: calc(150%);
+      height: auto;
+  }
     }
 
   }
@@ -301,6 +398,9 @@
     flex-wrap: wrap;
     gap: 63px;
     padding-top: 40px;
+    @include respond-to('phone'){
+gap:0px;
+    }
 
     &__value {
       margin-bottom: 2rem; 
