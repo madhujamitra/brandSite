@@ -1,11 +1,18 @@
 @import './partiales/variable/variable.scss';
 @import './partiales/variable/mixin.scss';
+@font-face {
+  font-family: 'Avenir Next Pro';
+  src: url('path-to-your-font/AvenirNextPro-Lt.woff2') format('woff2'),
+       url('path-to-your-font/AvenirNextPro-Lt.woff') format('woff');
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
 
 * {
   margin: 0px;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Sen', sans-serif;
+  font-family: "Avenir Next Pro Lt", sans-serif;
   // width: min-content;
 
 }
@@ -99,7 +106,9 @@
 
 
 }
-
+.photo_para{
+  background-color: $Alabaster;
+}
 .banner {
   background-image: url('../assets/Images/hero-bio.jpg');
   background-size: cover;

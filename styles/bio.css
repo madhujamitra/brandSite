@@ -1,8 +1,14 @@
+@font-face {
+  font-family: "Avenir Next Pro";
+  src: url("path-to-your-font/AvenirNextPro-Lt.woff2") format("woff2"), url("path-to-your-font/AvenirNextPro-Lt.woff") format("woff");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
 * {
   margin: 0px;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Sen", sans-serif;
+  font-family: "Avenir Next Pro Lt", sans-serif;
 }
 
 .navbar {
@@ -79,6 +85,10 @@
   .navbar__link--active::after {
     bottom: -1px;
   }
+}
+
+.photo_para {
+  background-color: #FAFAFA;
 }
 
 .banner {

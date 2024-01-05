@@ -4,5 +4,8 @@
     } @else if $breakpoint == 'phone' {
       @media (max-width: 480px) { @content; }
     }
+    @else if $breakpoint == 'desktop' {
+      @media (min-width: 1280px) { @content; }
+    }
    
   }
