@@ -99,7 +99,3 @@ const showsTitle = document.createElement('h3');
   // Create the shows list
   buildShowsList(shows);
 });
-
-
-
-  

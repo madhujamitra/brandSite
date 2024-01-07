@@ -1,9 +1,38 @@
+
 document.addEventListener('DOMContentLoaded', function() {
+
+    const comments = [
+        {
+          name: "Connor Walton",
+          date: "02/17/2021",
+          content: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
+        },
+        {
+          name: "Emilie Beach",
+          date: "01/09/2021",
+          content: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
+        },
+        {
+          name: "Miles Acosta",
+          date: "12/20/2020",
+          content: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
+        }
+      ];
     // Select the form and comment list elements
     const commentForm = document.querySelector('.comment-form');
     const commentList = document.querySelector('.comment-list');
-  
-    // Function to create and append a new comment to the list
+
+    function clearComments() {
+        commentList.innerHTML = '';
+    }
+
+    function renderComments() {
+        clearComments();
+        comments.forEach(comment => {
+            addComment(comment.name, comment.date, comment.content);
+        });
+    }
+
     function addComment(name, date, text) {
       const commentItem = document.createElement('li');
       commentItem.classList.add('comment');
@@ -40,26 +69,36 @@ document.addEventListener('DOMContentLoaded', function() {
       commentItem.appendChild(avatarDiv);
       commentItem.appendChild(bodyDiv);
   
-      // Add the new comment to the top of the comment list
       commentList.insertBefore(commentItem, commentList.firstChild);
     }
   
-    // Event listener for the form submission
-    commentForm.addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the form from submitting the traditional way
-  
-      const nameInput = commentForm.querySelector('.comment-form__input');
-      const commentTextarea = commentForm.querySelector('.comment-form__textarea');
-  
-      // Get current date in a simple format (MM/DD/YYYY)
-      const currentDate = new Date().toLocaleDateString('en-US');
-  
-      // Call the function to add the comment
-      addComment(nameInput.value, currentDate, commentTextarea.value);
-  
-      // Clear the form fields after submission
-      nameInput.value = '';
-      commentTextarea.value = '';
-    });
+    function handleFormSubmit(event) {
+        event.preventDefault();
+    
+        const nameInput = commentForm.querySelector('.comment-form__input');
+        const commentTextarea = commentForm.querySelector('.comment-form__textarea');
+        const currentDate = new Date().toLocaleDateString('en-US');
+    
+        // Constructs a new comment object
+        const newComment = {
+          name: nameInput.value,
+          date: currentDate,
+          content: commentTextarea.value
+        };
+    
+        comments.push(newComment);
+        
+        nameInput.value = '';
+        commentTextarea.value = '';
+    
+        // Re-render the comments
+        renderComments();
+      }
+      
+      // Attach the form submission event listener
+      commentForm.addEventListener('submit', handleFormSubmit);
+    
+      // Initial render of comments
+      renderComments();
   });
   
