@@ -1,0 +1,55 @@
+.shows {
+  padding: 2rem 0;
+}
+
+.shows__listings {
+  display: flex;
+  flex-direction: row;
+}
+.shows__listings__title {
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-weight: 400;
+  font-size: 24px;
+}
+.shows__listings__header {
+  display: flex;
+  padding: 1rem 0;
+}
+.shows__listings__header-date, .shows__listings__header-venue, .shows__listings__header-location {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  color: #AFAFAF;
+}
+.shows__listings__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.shows__listings__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #ccc;
+}
+.shows__listings__date, .shows__listings__venue, .shows__listings__location {
+  width: 12rem;
+  max-width: 70%;
+  flex: 1;
+}
+.shows__listings__ticket-link {
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+.shows__listings__ticket-link:hover {
+  background-color: #1a1a1a;
+}/*# sourceMappingURL=shows.css.map */

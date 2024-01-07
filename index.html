@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/bio.css">
+    <script src="./scripts/index-page.js"></script>
 </head>
 
 <body>
@@ -16,13 +17,13 @@
             
 
             <div class="navbar__list">
-                <a href="#" class="navbar__item navbar__link navbar__link--active">Biography</a>
-                <a href="#" class=" navbar__item navbar__link">Shows</a>
+                <a href="./index.html" class="navbar__item navbar__link navbar__link--active">Biography</a>
+                <a href="./pages/shows.html" class=" navbar__item navbar__link">Shows</a>
             </div>
 
     </nav>
 
-    <section class="banner">
+    <section class="banner banner__image__bio">
         <h2 class="banner__header">The Bees Knees</h2>
     </section>
 
@@ -84,6 +85,43 @@
                     
                 </div>
             </section>
+
+            <section class="main__para__section comment__section__para">
+                <h2 class="comment-section__title">Join the Conversation</h2>
+                <section class="comment-section">
+                   <div class="comment-section__form">
+                    <div class="comment-section__avatar"></div>
+                    <form class="comment-form">
+                        <label class="comment-form__label" for="name">Name</label>
+                        <input type="text" class="comment-form__input" placeholder="Enter your name" />
+
+                        <label class="comment-form__label" for="comment">Comment</label>
+                        <textarea class="comment-form__textarea" placeholder="Add a new comment"></textarea>
+
+                        <button type="submit" class="comment-form__button">COMMENT</button>
+                    </form>
+                   </div>
+
+                    
+                    <ul class="comment-list">
+                        <li class="comment">
+                            <div class="comment__avatar"></div>
+                            <div class="comment__body">
+                                <div class="comment__name-date">
+                                    <strong class="comment__name">Connor Walton</strong>
+                                    <span class="comment__date">02/17/2021</span>
+                                </div>
+                                <p class="comment__text">This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.</p>
+                            </div>
+                        </li>
+                        <!-- More comments -->
+                    </ul>
+                </section>
+
+            </section>
+        <section>
+            
+        </section>
         </section>
 
     </main>

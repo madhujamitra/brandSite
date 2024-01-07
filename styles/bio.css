@@ -92,7 +92,6 @@
 }
 
 .banner {
-  background-image: url("../assets/Images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -101,6 +100,30 @@
   display: flex;
   align-items: center;
   text-align: center;
+  position: relative;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(50, 50, 50, 0.5);
+  z-index: 1;
+}
+.banner__image__bio {
+  background-image: url("../assets/Images/hero-bio.jpg");
+  position: relative;
+}
+.banner__image__show {
+  min-height: 80vh;
+  background-image: url("../assets/Images/hero-shows.jpg");
+  position: relative;
+}
+.banner__content {
+  position: relative;
+  z-index: 2;
 }
 .banner__header {
   color: #FFFFFF;
@@ -112,6 +135,35 @@
   .banner__header {
     font-size: 36px;
     padding-left: 16px;
+  }
+}
+.banner__show {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+@media (max-width: 480px) {
+  .banner__show {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+.banner__show__group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.banner__show__text {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 400;
+  padding-left: 80px;
+}
+@media (max-width: 480px) {
+  .banner__show__text {
+    padding-left: 16px;
+    font-size: 14px;
   }
 }
 
@@ -153,6 +205,17 @@
 @media (max-width: 480px) {
   .photo__image__value {
     max-width: 100%;
+  }
+}
+
+.soundcloud-embed {
+  width: 40%;
+}
+@media (max-width: 480px) {
+  .soundcloud-embed {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
   }
 }
 
@@ -423,4 +486,110 @@
 }
 .footer__contact__alig {
   padding-bottom: 20px;
+}
+
+.comment__section__para {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.comment-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.comment-section__form {
+  display: flex;
+  flex-direction: row;
+}
+.comment-section__avatar {
+  width: 50px;
+  height: 50px;
+  background-image: url("../assets/Images/Mohan-muruge.jpg");
+  border-radius: 50%;
+  margin-top: 16px;
+  margin-right: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.comment-section__title {
+  text-align: left;
+  font-size: 36px;
+  font-weight: 400;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.comment-form {
+  margin-bottom: 30px;
+  text-align: right;
+}
+.comment-form__input, .comment-form__textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.comment-form__label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  color: #AFAFAF;
+  float: left;
+  margin-bottom: 5px;
+}
+.comment-form__button {
+  width: 30%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.comment-form__button:hover {
+  background-color: #333;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.comment__avatar {
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.comment__body {
+  background: #f9f9f9;
+  border-radius: 4px;
+  padding: 15px;
+  flex-grow: 1;
+  width: 80%;
+}
+.comment__name-date {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.comment__name {
+  font-weight: bold;
+}
+.comment__date {
+  color: #666;
+  font-size: 0.9em;
+}
+.comment__text {
+  margin: 0;
+  text-align: left;
 }/*# sourceMappingURL=bio.css.map */
