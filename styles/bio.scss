@@ -4,7 +4,7 @@
   font-family: 'Avenir Next Pro';
   src: url('path-to-your-font/AvenirNextPro-Lt.woff2') format('woff2'),
        url('path-to-your-font/AvenirNextPro-Lt.woff') format('woff');
-  font-weight: 300; /* Light */
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -141,13 +141,13 @@ position: relative;
 
 &__image__bio {
   background-image: url('../assets/Images/hero-bio.jpg');
-  position: relative; // Ensure the banner has a stacking context for the pseudo-element
+  position: relative;
 }
 
 &__image__show {
   min-height: 80vh;
   background-image: url('../assets/Images/hero-shows.jpg');
-  position: relative; // Ensure the banner has a stacking context for the pseudo-element
+  position: relative; 
 }
 &__content {
   position: relative;
@@ -708,7 +708,7 @@ position: relative;
   &__avatar {
     width: 48px;
     height: 48px;
-    background-color: #ddd; // Placeholder for avatar image
+    background-color: #ddd; 
     border-radius: 50%;
     margin-right: 10px;
   }
