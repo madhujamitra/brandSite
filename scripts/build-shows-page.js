@@ -74,8 +74,6 @@ const showsTitle = document.createElement('h3');
     showEl.appendChild(showLocationEl);
     showEl.appendChild(ticketLinkEl);
 
-   
-
     showEl.addEventListener('click', () => {
     
       const activeShowEls = container.querySelectorAll('.shows__listings__items--active');
