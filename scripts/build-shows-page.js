@@ -91,7 +91,7 @@ const showsTitle = document.createElement('h3');
   }
 
   const buildShowsList = (showsArray) => {
-    // showsListContainer.innerHTML = "";
+   
     while (showsListContainer.children.length > 1) {
       showsListContainer.removeChild(showsListContainer.lastChild);
     }
@@ -100,8 +100,8 @@ const showsTitle = document.createElement('h3');
       addShowToDom(show, showsListContainer);
     });
   }
-  //created to heading in table
+  // heading in table
   addHeaderRowToDom();
-  // Create the shows list
+  //  shows list
   buildShowsList(shows);
 });
