@@ -10,6 +10,9 @@
     @include respond-to('phone') {
         flex-direction: column;
       }
+      @include respond-to('tablet') {
+        flex-direction: column;
+      }
     &__title {
         text-align: center;
         margin-bottom: 1rem;  
@@ -23,6 +26,12 @@
             padding-left: 16px;
             padding-right: 16px;
             text-align: left;
+          }
+          @include respond-to('tablet') {
+            padding-left: 36px;
+            padding-right: 36px;
+            text-align: left;
+            font-size: 24px;
           }
     }
 
@@ -47,6 +56,12 @@
         list-style: none;
         padding: 0;
         margin: 0;
+
+        @include respond-to('tablet') {
+            padding-left: 36px;
+            padding-right: 36px;
+           
+          }
     }
 
     &__items {
@@ -55,7 +70,14 @@
         align-items: center;
         padding: 1.5rem 0;
         border-bottom: 1px solid #ccc;
-       
+        @include respond-to('phone') {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left:16px;
+            padding-right:16px;
+            gap:16px;
+          }
+
     }
 
     &__date,
@@ -73,6 +95,9 @@
         padding: 0.5rem 1rem;
         border-radius: 0.25rem;
         text-align: center;
+        @include respond-to('phone') {
+            padding: 0.5rem 37%;
+          }
 
         &:hover {
             background-color: darken($color: #333, $amount: 10%);
@@ -81,78 +106,6 @@
 }
 
 
-.shows {
-    &__title {
-      font-size: 1.5rem; // Example size, adjust as needed
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-  
-    &__list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-  
-    &__item {
-      margin-bottom: 1rem;
-      padding: 1rem;
-      border: 1px solid #ccc; // Example border, adjust as needed
-    }
-  
-    &__detail {
-      margin-bottom: 0.5rem;
-    }
-  
-    &__label {
-      font-weight: bold;
-    }
-  
-    &__info {
-      margin-bottom: 0.25rem;
-    }
-  
-    &__ticket-link {
-      display: block;
-      text-decoration: none;
-      background-color: #000; // Example color, adjust as needed
-      color: #fff;
-      text-align: center;
-      padding: 0.75rem;
-      border-radius: 0.25rem;
-    }
-  }
-  
-  // Media query for larger screens (tablet upwards)
-  @media (min-width: 768px) {
-    .shows {
-      &__title {
-        // Adjust the font size for desktop if needed
-        font-size: 2rem;
-      }
-  
-      &__item {
-        // Adjust the layout for desktop if needed
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-  
-      &__detail {
-        // Adjust the layout for desktop if needed
-        flex: 1;
-        margin-right: 1rem;
-  
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-  
-      &__ticket-link {
-        // Adjust padding or any other properties for desktop if needed
-        padding: 1rem;
-      }
-    }
-  }
+
   
 

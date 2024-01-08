@@ -108,6 +108,12 @@
     padding-bottom: 16px;
   }
 }
+@media (max-width: 768px) and (min-width: 481px) {
+  .banner {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
 .banner::before {
   content: "";
   position: absolute;
@@ -143,12 +149,24 @@
     font-weight: 700;
   }
 }
+@media (max-width: 768px) and (min-width: 481px) {
+  .banner__header {
+    padding-left: 36px;
+    font-weight: 700;
+  }
+}
 .banner__show {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 @media (max-width: 480px) {
+  .banner__show {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) and (min-width: 481px) {
   .banner__show {
     align-items: flex-start;
     flex-direction: column;
@@ -170,6 +188,12 @@
   .banner__show__text {
     padding-left: 16px;
     font-size: 14px;
+  }
+}
+@media (max-width: 768px) and (min-width: 481px) {
+  .banner__show__text {
+    padding-left: 36px;
+    font-size: 24px;
   }
 }
 
@@ -221,6 +245,13 @@
   .soundcloud-embed {
     padding-left: 16px;
     padding-right: 16px;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) and (min-width: 481px) {
+  .soundcloud-embed {
+    padding-left: 36px;
+    padding-right: 36px;
     width: 100%;
   }
 }

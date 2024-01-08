@@ -126,6 +126,10 @@ position: relative;
   padding-top: 16px;
   padding-bottom: 16px;
 }
+@include respond-to ('tablet') {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
 
 &::before {
   content: "";
@@ -164,12 +168,20 @@ position: relative;
       padding-left: 16px;
       font-weight: 700;
     }
+    @include respond-to('tablet') {
+      padding-left: 36px;
+      font-weight: 700;
+    }
   }
   &__show{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     @include respond-to('phone') {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    @include respond-to('tablet') {
       align-items: flex-start;
       flex-direction: column;
     }
@@ -191,6 +203,10 @@ position: relative;
       @include respond-to('phone') {
         padding-left: 16px;
         font-size: 14px;
+      }
+      @include respond-to('tablet') {
+        padding-left: 36px;
+        font-size: 24px;
       }
 
     }
@@ -257,6 +273,11 @@ position: relative;
   @include respond-to ('phone') {
     padding-left: 16px;
     padding-right: 16px;
+    width: 100%; 
+  }
+  @include respond-to ('tablet') {
+    padding-left: 36px;
+    padding-right: 36px;
     width: 100%; 
   }
 }
