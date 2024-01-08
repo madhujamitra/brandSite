@@ -7,31 +7,29 @@
 .shows__listings {
     display: flex;
     flex-direction: row;
-    // justify-content: space-evenly;
-
+    @include respond-to('phone') {
+        flex-direction: column;
+      }
     &__title {
         text-align: center;
         margin-bottom: 1rem;  
         margin-top: 1rem;    
-        // padding-left: 13rem;
-        // padding-right: 13rem;
         //todo: change it
         padding-left: 10%;
         padding-right: 10%;
         font-weight: 400;
         font-size: 24px;
+        @include respond-to('phone') {
+            padding-left: 16px;
+            padding-right: 16px;
+            text-align: left;
+          }
     }
-    &block{
-    //     display: flex;
-    // flex-direction: row;
-    }
+
 
     &__header {
         display: flex;
-        // justify-content: space-between;
         padding: 1rem 0;
-        // gap:40vh;
-        // background-color: #f4f4f4;
 
         &-date,
         &-venue,
@@ -43,9 +41,6 @@
             
         }
 
-        &-link {
-            // Empty for alignment with the BUY TICKETS button
-        }
     }
 
     &__list {
@@ -66,7 +61,6 @@
     &__date,
     &__venue,
     &__location {
-        // margin-right: 1rem;
         width:12rem;
         max-width: 70%;
         flex: 1;
@@ -85,4 +79,80 @@
         }
     }
 }
+
+
+.shows {
+    &__title {
+      font-size: 1.5rem; // Example size, adjust as needed
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  
+    &__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    &__item {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border: 1px solid #ccc; // Example border, adjust as needed
+    }
+  
+    &__detail {
+      margin-bottom: 0.5rem;
+    }
+  
+    &__label {
+      font-weight: bold;
+    }
+  
+    &__info {
+      margin-bottom: 0.25rem;
+    }
+  
+    &__ticket-link {
+      display: block;
+      text-decoration: none;
+      background-color: #000; // Example color, adjust as needed
+      color: #fff;
+      text-align: center;
+      padding: 0.75rem;
+      border-radius: 0.25rem;
+    }
+  }
+  
+  // Media query for larger screens (tablet upwards)
+  @media (min-width: 768px) {
+    .shows {
+      &__title {
+        // Adjust the font size for desktop if needed
+        font-size: 2rem;
+      }
+  
+      &__item {
+        // Adjust the layout for desktop if needed
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
+      &__detail {
+        // Adjust the layout for desktop if needed
+        flex: 1;
+        margin-right: 1rem;
+  
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+  
+      &__ticket-link {
+        // Adjust padding or any other properties for desktop if needed
+        padding: 1rem;
+      }
+    }
+  }
+  
 

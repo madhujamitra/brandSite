@@ -102,6 +102,12 @@
   text-align: center;
   position: relative;
 }
+@media (max-width: 480px) {
+  .banner {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
 .banner::before {
   content: "";
   position: absolute;
@@ -109,8 +115,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(50, 50, 50, 0.5);
-  z-index: 1;
+  z-index: 2;
 }
 .banner__image__bio {
   background-image: url("../assets/Images/hero-bio.jpg");
@@ -133,8 +138,9 @@
 }
 @media (max-width: 480px) {
   .banner__header {
-    font-size: 36px;
+    font-size: 24px;
     padding-left: 16px;
+    font-weight: 700;
   }
 }
 .banner__show {
@@ -503,8 +509,8 @@
   flex-direction: row;
 }
 .comment-section__avatar {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   background-image: url("../assets/Images/Mohan-muruge.jpg");
   border-radius: 50%;
   margin-top: 16px;
@@ -513,6 +519,12 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+@media (max-width: 480px) {
+  .comment-section__avatar {
+    min-width: 36px;
+    min-width: 36px;
+  }
+}
 .comment-section__title {
   text-align: left;
   font-size: 36px;
@@ -520,17 +532,39 @@
   padding-left: 80px;
   padding-right: 80px;
 }
+@media (max-width: 480px) {
+  .comment-section__title {
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 24px;
+  }
+}
 
 .comment-form {
   margin-bottom: 30px;
   text-align: right;
 }
-.comment-form__input, .comment-form__textarea {
+.comment-form__input {
+  min-height: 48px;
   width: 100%;
-  padding: 10px;
+  padding: 16px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #E1E1E1;
+  outline-color: #323232;
   border-radius: 4px;
+  background: #FAFAFA;
+}
+.comment-form__textarea {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 10px;
+  border: 1px solid #E1E1E1;
+  outline-color: #323232;
+  border-radius: 4px;
+  background: #FAFAFA;
+}
+.comment-form__input.error, .comment-form__textarea.error {
+  outline: 2px solid red;
 }
 .comment-form__label {
   text-transform: uppercase;
@@ -538,7 +572,7 @@
   font-weight: 400;
   color: #AFAFAF;
   float: left;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 .comment-form__button {
   width: 30%;
@@ -561,19 +595,22 @@
 .comment {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #E1E1E1;
+}
+.comment:last-child {
+  border-bottom: 1px solid #E1E1E1;
 }
 .comment__avatar {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   background-color: #ddd;
   border-radius: 50%;
   margin-right: 10px;
 }
 .comment__body {
-  background: #f9f9f9;
   border-radius: 4px;
-  padding: 15px;
   flex-grow: 1;
   width: 80%;
 }
@@ -583,13 +620,19 @@
   margin-bottom: 10px;
 }
 .comment__name {
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 500;
+  color: #323232;
 }
 .comment__date {
-  color: #666;
-  font-size: 0.9em;
+  color: #AFAFAF;
+  font-size: 12px;
 }
 .comment__text {
   margin: 0;
+  font-weight: 400;
   text-align: left;
+  font-size: 12px;
+  line-height: 22px;
+  color: #323232;
 }/*# sourceMappingURL=bio.css.map */

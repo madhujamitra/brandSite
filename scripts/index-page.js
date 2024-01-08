@@ -78,7 +78,19 @@ document.addEventListener('DOMContentLoaded', function() {
         const nameInput = commentForm.querySelector('.comment-form__input');
         const commentTextarea = commentForm.querySelector('.comment-form__textarea');
         const currentDate = new Date().toLocaleDateString('en-US');
-    
+        const inputs = commentForm.querySelectorAll('.comment-form__input, .comment-form__textarea');
+
+        inputs.forEach(input => {
+          if (input.required && input.value.trim() === '') {
+            // Add the 'error' class if the field is empty
+            input.classList.add('error');
+          } else {
+            // Remove the 'error' class if the field is not empty
+            input.classList.remove('error');
+          }
+        });
+
+
         // Constructs a new comment object
         const newComment = {
           name: nameInput.value,
