@@ -78,6 +78,14 @@
             gap:16px;
           }
 
+          &:hover {
+            background-color: $Alabaster;
+          }
+        
+          &--active {
+            background-color:$Mercury;
+          }
+
     }
 
     &__date,

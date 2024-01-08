@@ -4,10 +4,12 @@ const shows = [
     { date: 'Fri Oct 15 2021', venue: 'View Lounge', location: 'San Francisco, CA' },
     { date: 'Sat Nov 06 2021', venue: 'Hyatt Agency', location: 'San Francisco, CA' },
     { date: 'Fri Nov 26 2021', venue: 'Moscow Center', location: 'San Francisco, CA' },
-    { date: 'Wed Dec 15 2021', venue: 'Press Club', location: 'San Francisco, CA' }
+    { date: 'Wed Dec 14 2021', venue: 'Press Club', location: 'San Francisco, CA' }
   ];
   
 document.addEventListener('DOMContentLoaded', function() {
+
+
 
 //for heading shows
 const showsListingsContainer = document.querySelector('.shows__listings');
@@ -72,9 +74,13 @@ const showsTitle = document.createElement('h3');
     showEl.appendChild(showLocationEl);
     showEl.appendChild(ticketLinkEl);
 
+   
+
     showEl.addEventListener('click', () => {
+    
       const activeShowEls = container.querySelectorAll('.shows__listings__items--active');
       activeShowEls.forEach((el) => {
+        
         el.classList.remove('shows__listings__items--active');
       });
 

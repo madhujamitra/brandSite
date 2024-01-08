@@ -77,6 +77,12 @@
     gap: 16px;
   }
 }
+.shows__listings__items:hover {
+  background-color: #FAFAFA;
+}
+.shows__listings__items--active {
+  background-color: #E1E1E1;
+}
 .shows__listings__date, .shows__listings__venue, .shows__listings__location {
   width: 12rem;
   max-width: 70%;
