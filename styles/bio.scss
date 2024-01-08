@@ -589,7 +589,7 @@ position: relative;
 
 }
 
-.comment__section {
+.comment-section {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
@@ -631,7 +631,7 @@ position: relative;
   }
 }
 
-.comment__form {
+.comment-form {
   margin-bottom: 30px;
   text-align: right;
 
@@ -689,7 +689,7 @@ position: relative;
   }
 }
 
-.comment__list {
+.comment-list {
   list-style: none;
   padding: 0;
 }
@@ -745,4 +745,3 @@ position: relative;
     color: $BandSite-Black;
   }
 }
-

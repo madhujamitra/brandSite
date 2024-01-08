@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Avenir Next Pro";
   src: url("path-to-your-font/AvenirNextPro-Lt.woff2") format("woff2"), url("path-to-your-font/AvenirNextPro-Lt.woff") format("woff");
-  font-weight: 300; /* Light */
+  font-weight: 300;
   font-style: normal;
 }
 * {
