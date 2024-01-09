@@ -119,6 +119,7 @@ min-height: 60vh;
 display: flex;
 align-items: center;
 text-align: center;
+
 position: relative;
 @include respond-to ('phone') {
   padding-top: 16px;
@@ -133,6 +134,9 @@ position: relative;
   background-image: url('../assets/Images/hero-bio.jpg');
   position: relative;
 }
+
+
+
 
 &__image__show {
   min-height: 60vh;
