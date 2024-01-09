@@ -61,6 +61,11 @@
     padding-right: 36px;
   }
 }
+@media (max-width: 480px) {
+  .shows__listings__list > :first-child {
+    display: none;
+  }
+}
 .shows__listings__items {
   display: flex;
   justify-content: space-between;
@@ -98,9 +103,24 @@
 }
 @media (max-width: 480px) {
   .shows__listings__ticket-link {
-    padding: 0.5rem 37%;
+    padding: 0.5rem 33%;
   }
 }
 .shows__listings__ticket-link:hover {
   background-color: #1a1a1a;
+}
+@media (min-width: 1280px) {
+  .shows__listings__block {
+    width: -webkit-fill-available;
+    padding-right: 60px;
+  }
+}
+
+.mobile--header {
+  display: none;
+}
+@media (max-width: 480px) {
+  .mobile--header {
+    display: block;
+  }
 }/*# sourceMappingURL=shows.css.map */

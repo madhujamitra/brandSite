@@ -78,10 +78,10 @@
       margin-left: 0px;
     }
 
-    &:hover {
-      border-bottom: 2px solid $White;
-      padding-bottom: 27px;
-    }
+    // &:hover {
+    //   border-bottom: 2px solid $White;
+    //   padding-bottom: 27px;
+    // }
 
   }
 
@@ -91,13 +91,14 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -10px;
+    bottom: -8px;
     height: 2px;
     background-color: $White;
     width: auto;
 
     @include respond-to('phone') {
-      bottom: -1px;
+      bottom: 0px;
+      height: 4px;
     }
   }
 
@@ -128,26 +129,17 @@ position: relative;
   padding-bottom: 24px;
 }
 
-&::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  // background: rgba(50, 50, 50, 0.5); // #323232 with 50% opacity
-  z-index: 2;
-}
-
 &__image__bio {
   background-image: url('../assets/Images/hero-bio.jpg');
   position: relative;
 }
 
 &__image__show {
-  min-height: 80vh;
+  min-height: 60vh;
   background-image: url('../assets/Images/hero-shows.jpg');
   position: relative; 
+  background-position: top;
+  text-align: left;
 }
 &__content {
   position: relative;

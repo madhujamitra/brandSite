@@ -1,119 +1,149 @@
 @import './partiales/variable/variable.scss';
 @import './partiales/variable/mixin.scss';
-.shows{
-    padding: 2rem 0;
+
+.shows {
+  padding: 2rem 0;
 }
 
 .shows__listings {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+
+  @include respond-to('phone') {
+    flex-direction: column;
+  }
+
+  @include respond-to('tablet') {
+    flex-direction: column;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    //todo: change it
+    padding-left: 10%;
+    padding-right: 10%;
+    font-weight: 400;
+    font-size: 24px;
+
     @include respond-to('phone') {
-        flex-direction: column;
-      }
-      @include respond-to('tablet') {
-        flex-direction: column;
-      }
-    &__title {
-        text-align: center;
-        margin-bottom: 1rem;  
-        margin-top: 1rem;    
-        //todo: change it
-        padding-left: 10%;
-        padding-right: 10%;
-        font-weight: 400;
-        font-size: 24px;
-        @include respond-to('phone') {
-            padding-left: 16px;
-            padding-right: 16px;
-            text-align: left;
-          }
-          @include respond-to('tablet') {
-            padding-left: 36px;
-            padding-right: 36px;
-            text-align: left;
-            font-size: 24px;
-          }
+      padding-left: 16px;
+      padding-right: 16px;
+      text-align: left;
+    }
+
+    @include respond-to('tablet') {
+      padding-left: 36px;
+      padding-right: 36px;
+      text-align: left;
+      font-size: 24px;
     }
 
 
-    &__header {
-        display: flex;
-        padding: 1rem 0;
+  }
 
-        &-date,
-        &-venue,
-        &-location {
-            text-transform: uppercase;
-            font-size: 12px;
-            font-weight: 400;
-            color:$Silver;
-            
-        }
 
-    }
+  &__header {
+    display: flex;
+    padding: 1rem 0;
 
-    &__list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        @include respond-to('tablet') {
-            padding-left: 36px;
-            padding-right: 36px;
-           
-          }
-    }
-
-    &__items {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1.5rem 0;
-        border-bottom: 1px solid #ccc;
-        @include respond-to('phone') {
-            flex-direction: column;
-            align-items: flex-start;
-            padding-left:16px;
-            padding-right:16px;
-            gap:16px;
-          }
-
-          &:hover {
-            background-color: $Alabaster;
-          }
-        
-          &--active {
-            background-color:$Mercury;
-          }
+    &-date,
+    &-venue,
+    &-location {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 400;
+      color: $Silver;
 
     }
-
-    &__date,
-    &__venue,
-    &__location {
-        width:12rem;
-        max-width: 70%;
-        flex: 1;
-    }
-
-    &__ticket-link {
-        background-color: #333;
-        color: white;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        border-radius: 0.25rem;
-        text-align: center;
-        @include respond-to('phone') {
-            padding: 0.5rem 37%;
-          }
-
-        &:hover {
-            background-color: darken($color: #333, $amount: 10%);
-        }
-    }
-}
-
-
-
   
 
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @include respond-to('tablet') {
+      padding-left: 36px;
+      padding-right: 36px;
+
+    }
+
+    >:first-child {
+      @include respond-to('phone') {
+        display: none;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #ccc;
+
+    @include respond-to('phone') {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 16px;
+      padding-right: 16px;
+      gap: 16px;
+    }
+
+    &:hover {
+      background-color: $Alabaster;
+    }
+
+    &--active {
+      background-color: $Mercury;
+    }
+
+
+
+  }
+
+  &__date,
+  &__venue,
+  &__location {
+    width: 12rem;
+    max-width: 70%;
+    flex: 1;
+  }
+
+  &__ticket-link {
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-align: center;
+
+    @include respond-to('phone') {
+      padding: 0.5rem 33%;
+    }
+
+    &:hover {
+      background-color: darken($color: #333, $amount: 10%);
+    }
+  }
+  &__block{
+    @include respond-to('desktop') {
+      width: -webkit-fill-available;
+      padding-right: 60px;
+    }
+
+  }
+
+}
+
+.mobile--header{
+  display: none;
+
+  @include respond-to('phone') {
+    display: block;
+  }
+}

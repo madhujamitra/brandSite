@@ -27,7 +27,7 @@ const showsTitle = document.createElement('h3');
     const headerRowEl = document.createElement('li');
     headerRowEl.classList.add('shows__listings__items');
 
-    // Create and append the header elements
+    // Create and append the header elements 
     const headerDateEl = document.createElement('div');
     headerDateEl.classList.add('shows__listings__date', 'shows__listings__header-date');
     headerDateEl.textContent = 'DATE';
@@ -52,16 +52,29 @@ const showsTitle = document.createElement('h3');
   const addShowToDom = (show, container) => {
     const showEl = document.createElement('li');
     showEl.classList.add('shows__listings__items');
-    
+
+    const showDateElheader = document.createElement('div');
+    const showVenueElheader = document.createElement('div');
+    const showLocationElheader = document.createElement('div');
     const showDateEl = document.createElement('div');
     const showVenueEl = document.createElement('div');
     const showLocationEl = document.createElement('div');
     const ticketLinkEl = document.createElement('a');
     
+
+    showDateElheader.classList.add('shows__listings__date' ,'shows__listings__header-date', 'mobile--header');
+    showVenueElheader.classList.add('shows__listings__venue','shows__listings__header-venue','mobile--header');
+    showLocationElheader.classList.add('shows__listings__location' , 'shows__listings__header-location','mobile--header');
+
     showDateEl.classList.add('shows__listings__date');
     showVenueEl.classList.add('shows__listings__venue');
     showLocationEl.classList.add('shows__listings__location');
     ticketLinkEl.classList.add('shows__listings__ticket-link');
+
+
+    showDateElheader.textContent = 'DATE';
+    showVenueElheader.textContent = 'VENUE';
+    showLocationElheader.textContent = 'LOCATION';
     
     showDateEl.textContent = show.date;
     showVenueEl.textContent = show.venue;
@@ -69,8 +82,12 @@ const showsTitle = document.createElement('h3');
     ticketLinkEl.textContent = 'BUY TICKETS';
     ticketLinkEl.href = '#';
     
+
+    showEl.appendChild(showDateElheader);
     showEl.appendChild(showDateEl);
+    showEl.appendChild(showVenueElheader);
     showEl.appendChild(showVenueEl);
+    showEl.appendChild(showLocationElheader);
     showEl.appendChild(showLocationEl);
     showEl.appendChild(ticketLinkEl);
 

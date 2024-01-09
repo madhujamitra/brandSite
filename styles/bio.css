@@ -67,23 +67,20 @@
     margin-left: 0px;
   }
 }
-.navbar__link:hover {
-  border-bottom: 2px solid #FFFFFF;
-  padding-bottom: 27px;
-}
 .navbar__link--active::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -10px;
+  bottom: -8px;
   height: 2px;
   background-color: #FFFFFF;
   width: auto;
 }
 @media (max-width: 480px) {
   .navbar__link--active::after {
-    bottom: -1px;
+    bottom: 0px;
+    height: 4px;
   }
 }
 
@@ -114,23 +111,16 @@
     padding-bottom: 24px;
   }
 }
-.banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-}
 .banner__image__bio {
   background-image: url("../assets/Images/hero-bio.jpg");
   position: relative;
 }
 .banner__image__show {
-  min-height: 80vh;
+  min-height: 60vh;
   background-image: url("../assets/Images/hero-shows.jpg");
   position: relative;
+  background-position: top;
+  text-align: left;
 }
 .banner__content {
   position: relative;
