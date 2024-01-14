@@ -1,27 +1,4 @@
-import { commentValue } from "./api-data.js";
-//console.log(commentValue());
-
-async function postRequest(newComment){
-  console.log("newcooment" ,newComment);
-  try{
-    const apiKey = "77094f7d-6b54-4bdb-bae6-7542c07688fd";
-    const commentUrl = "https://project-1-api.herokuapp.com/comments"
-    const postValue = await axios.post(`${commentUrl}?api_key=${apiKey}`, newComment ,{
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-    console.log("vale" , postValue);
-
-  }catch(error){
-    console.log("error" ,error);
-
-  }
-}
-
-//postRequest();
-
-
+import { commentValue , postRequest } from "./api-data.js";
 
 document.addEventListener('DOMContentLoaded', async function() {
  let comments;
@@ -122,15 +99,10 @@ document.addEventListener('DOMContentLoaded', async function() {
       }
   
       nameInput.value = '';
-      commentTextarea.value = '';
-  
- 
-      
+      commentTextarea.value = ''; 
     }
-    
-
+  
     commentForm.addEventListener('submit', handleFormSubmit);
-  
-  
     renderComments();
 });
+

@@ -1,9 +1,6 @@
 import { showValue } from "./api-data.js";
 
- 
 document.addEventListener('DOMContentLoaded', function() {
-
-
 
 //for heading shows
 const showsListingsContainer = document.querySelector('.shows__listings');
@@ -47,6 +44,12 @@ const showsTitle = document.createElement('h3');
     const showEl = document.createElement('li');
     showEl.classList.add('shows__listings__items');
 
+    function formatTimestamp(timestamp) {
+      const date = new Date(timestamp);
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      return new Intl.DateTimeFormat('en-US', options).format(date);
+    }
+
     const showDateElheader = document.createElement('div');
     const showVenueElheader = document.createElement('div');
     const showLocationElheader = document.createElement('div');
@@ -70,7 +73,7 @@ const showsTitle = document.createElement('h3');
     showVenueElheader.textContent = 'VENUE';
     showLocationElheader.textContent = 'LOCATION';
     
-    showDateEl.textContent = show.date;
+    showDateEl.textContent = formatTimestamp(show.date);
     showVenueEl.textContent = show.place;
     showLocationEl.textContent = show.location;
     ticketLinkEl.textContent = 'BUY TICKETS';
@@ -109,10 +112,6 @@ const showsTitle = document.createElement('h3');
       addShowToDom(show, showsListContainer);
     });
   }
-  // // heading in table
-  // addHeaderRowToDom();
-  // //  shows list
-  //  buildShowsList(shows);
 
   async function loadAndDisplayShows() {
     try {
@@ -135,8 +134,6 @@ const showsTitle = document.createElement('h3');
 
 
 loadAndDisplayShows();
-
-
 addHeaderRowToDom();
 });
 
