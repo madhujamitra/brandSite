@@ -1,12 +1,6 @@
-const shows = [
-    { date: 'Mon Sept 06 2021', venue: 'Ronald Lane', location: 'San Francisco, CA' },
-    { date: 'Tue Sept 21 2021', venue: 'Pier 3 East', location: 'San Francisco, CA' },
-    { date: 'Fri Oct 15 2021', venue: 'View Lounge', location: 'San Francisco, CA' },
-    { date: 'Sat Nov 06 2021', venue: 'Hyatt Agency', location: 'San Francisco, CA' },
-    { date: 'Fri Nov 26 2021', venue: 'Moscow Center', location: 'San Francisco, CA' },
-    { date: 'Wed Dec 14 2021', venue: 'Press Club', location: 'San Francisco, CA' }
-  ];
-  
+import { showValue } from "./api-data.js";
+
+ 
 document.addEventListener('DOMContentLoaded', function() {
 
 
@@ -77,7 +71,7 @@ const showsTitle = document.createElement('h3');
     showLocationElheader.textContent = 'LOCATION';
     
     showDateEl.textContent = show.date;
-    showVenueEl.textContent = show.venue;
+    showVenueEl.textContent = show.place;
     showLocationEl.textContent = show.location;
     ticketLinkEl.textContent = 'BUY TICKETS';
     ticketLinkEl.href = '#';
@@ -104,7 +98,7 @@ const showsTitle = document.createElement('h3');
     
     container.appendChild(showEl);
   }
-
+//call the value here using asyn and converting intion async function.
   const buildShowsList = (showsArray) => {
    
     while (showsListContainer.children.length > 1) {
@@ -115,8 +109,34 @@ const showsTitle = document.createElement('h3');
       addShowToDom(show, showsListContainer);
     });
   }
-  // heading in table
-  addHeaderRowToDom();
-  //  shows list
-  buildShowsList(shows);
+  // // heading in table
+  // addHeaderRowToDom();
+  // //  shows list
+  //  buildShowsList(shows);
+
+  async function loadAndDisplayShows() {
+    try {
+        const showsData = await showValue(); 
+        buildShowsList(showsData); 
+    } catch (error) {
+        console.error('Error fetching show data:', error);
+        if (error.response) {
+            console.error(error.response.data);
+            console.error(error.response.status);
+            console.error(error.response.headers);
+        } else if (error.request) {
+            
+        } else {
+           
+            console.error('Error', error.message);
+        }
+    }
+}
+
+
+loadAndDisplayShows();
+
+
+addHeaderRowToDom();
 });
+

@@ -1,24 +1,38 @@
+import { commentValue } from "./api-data.js";
+//console.log(commentValue());
 
-document.addEventListener('DOMContentLoaded', function() {
-
-  const comments = [
-      {
-        name: "Connor Walton",
-        date: "02/17/2021",
-        content: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-      },
-      {
-        name: "Emilie Beach",
-        date: "01/09/2021",
-        content: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
-      },
-      {
-        name: "Miles Acosta",
-        date: "12/20/2020",
-        content: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
+async function postRequest(newComment){
+  console.log("newcooment" ,newComment);
+  try{
+    const apiKey = "77094f7d-6b54-4bdb-bae6-7542c07688fd";
+    const commentUrl = "https://project-1-api.herokuapp.com/comments"
+    const postValue = await axios.post(`${commentUrl}?api_key=${apiKey}`, newComment ,{
+      headers: {
+        'Content-Type': 'application/json'
       }
-    ];
- 
+    });
+    console.log("vale" , postValue);
+
+  }catch(error){
+    console.log("error" ,error);
+
+  }
+}
+
+//postRequest();
+
+
+
+document.addEventListener('DOMContentLoaded', async function() {
+ let comments;
+  try{
+    const value = await commentValue();
+    comments = value.data;
+  }catch(error){
+    console.log(error);
+  }
+
+
   const commentForm = document.querySelector('.comment-form');
   const commentList = document.querySelector('.comment-list');
 
@@ -29,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function renderComments() {
       clearComments();
       comments.forEach(comment => {
-          addComment(comment.name, comment.date, comment.content);
+          addComment(comment.name, comment.date, comment.comment);
       });
   }
 
@@ -72,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
     commentList.insertBefore(commentItem, commentList.firstChild);
   }
 
-  function handleFormSubmit(event) {
+ async function handleFormSubmit(event) {
       event.preventDefault();
   
       const nameInput = commentForm.querySelector('.comment-form__input');
@@ -91,23 +105,30 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
 
-   
-      const newComment = {
+   const newComment = {
         name: nameInput.value,
-        date: currentDate,
-        content: commentTextarea.value
+        comment: commentTextarea.value
       };
-  
-      comments.push(newComment);
       
+//for adding new comment to api and the we care fetching the value
+      try{
+       await postRequest(newComment);
+        const updatedComments =  await commentValue();
+        comments = updatedComments.data;
+        renderComments();
+
+      }catch(error){
+        console.log(error);
+      }
+  
       nameInput.value = '';
       commentTextarea.value = '';
   
  
-      renderComments();
+      
     }
     
-  
+
     commentForm.addEventListener('submit', handleFormSubmit);
   
   
