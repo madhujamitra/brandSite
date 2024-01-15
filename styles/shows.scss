@@ -115,8 +115,8 @@
   }
 
   &__ticket-link {
-    background-color: #333;
-    color: white;
+    background-color: $BandSite-Black;
+    color: $White;
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
@@ -127,7 +127,7 @@
     }
 
     &:hover {
-      background-color: darken($color: #333, $amount: 10%);
+      background-color: $BandSite-DarkBlack;
     }
   }
   &__block{

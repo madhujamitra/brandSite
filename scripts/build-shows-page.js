@@ -18,17 +18,17 @@ const showsTitle = document.createElement('h3');
     const headerRowEl = document.createElement('li');
     headerRowEl.classList.add('shows__listings__items');
 
-    // Create and append the header elements 
+    // Create and append the header elements => ,'shows__listings__header-date' =>, 'shows__listings__header-venue'
     const headerDateEl = document.createElement('div');
-    headerDateEl.classList.add('shows__listings__date', 'shows__listings__header-date');
+    headerDateEl.classList.add('shows__listings__date');
     headerDateEl.textContent = 'DATE';
 
     const headerVenueEl = document.createElement('div');
-    headerVenueEl.classList.add('shows__listings__venue', 'shows__listings__header-venue');
+    headerVenueEl.classList.add('shows__listings__venue');
     headerVenueEl.textContent = 'VENUE';
 
     const headerLocationEl = document.createElement('div');
-    headerLocationEl.classList.add('shows__listings__location', 'shows__listings__header-location');
+    headerLocationEl.classList.add('shows__listings__location');
     headerLocationEl.textContent = 'LOCATION';
 
     headerRowEl.appendChild(headerDateEl);

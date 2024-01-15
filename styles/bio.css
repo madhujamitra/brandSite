@@ -12,7 +12,6 @@
 }
 
 .navbar {
-  color: #FFFFFF;
   background-color: #323232;
   display: flex;
   flex-direction: row;
@@ -48,16 +47,13 @@
     justify-content: space-evenly;
   }
 }
-.navbar__item {
-  margin-left: 2rem;
-}
 .navbar__link {
-  color: #FFFFFF;
+  margin-left: 2rem;
+  color: #E1E1E1;
   text-decoration: none;
   position: relative;
   padding-bottom: 1.188rem;
   font-size: 0.875rem;
-  font-weight: 300;
 }
 @media (max-width: 480px) {
   .navbar__link {
@@ -66,6 +62,9 @@
     padding-left: 25%;
     padding-right: 25%;
   }
+}
+.navbar__link--active {
+  color: #FFFFFF;
 }
 .navbar__link--active::after {
   content: "";
@@ -76,6 +75,7 @@
   height: 0.125rem;
   background-color: #FFFFFF;
   width: auto;
+  font-weight: bold;
 }
 @media (max-width: 480px) {
   .navbar__link--active::after {
@@ -115,12 +115,32 @@
   background-image: url("../assets/Images/hero-bio.jpg");
   position: relative;
 }
+.banner__image__bio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(50, 50, 50, 0.5);
+  z-index: 1;
+}
 .banner__image__show {
   min-height: 60vh;
   background-image: url("../assets/Images/hero-shows.jpg");
   position: relative;
   background-position: top;
   text-align: left;
+}
+.banner__image__show::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(50, 50, 50, 0.5);
+  z-index: 1;
 }
 .banner__content {
   position: relative;
@@ -131,6 +151,8 @@
   padding-left: 5rem;
   font-size: 3.75rem;
   font-weight: 400;
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 480px) {
   .banner__header {
@@ -173,6 +195,8 @@
   font-size: 1.5rem;
   font-weight: 400;
   padding-left: 5rem;
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 480px) {
   .banner__show__text {
@@ -229,6 +253,8 @@
 
 .soundcloud-embed {
   width: 40%;
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 480px) {
   .soundcloud-embed {

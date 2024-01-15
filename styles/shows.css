@@ -94,8 +94,8 @@
   flex: 1;
 }
 .shows__listings__ticket-link {
-  background-color: #333;
-  color: white;
+  background-color: #323232;
+  color: #FFFFFF;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -107,7 +107,7 @@
   }
 }
 .shows__listings__ticket-link:hover {
-  background-color: #1a1a1a;
+  background-color: #000000;
 }
 @media (min-width: 1280px) {
   .shows__listings__block {
