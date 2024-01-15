@@ -30,20 +30,20 @@
 
   @include respond-to('phone') {
     justify-content: center;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-bottom: 0rem;
   }
 
 
   &__header {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 300;
     text-decoration: none;
     color: $White;
 
     @include respond-to('phone') {
-      font-size: 36px;
+      font-size: 2.25rem;
     }
   }
 
@@ -68,21 +68,17 @@
     color: $White;
     text-decoration: none;
     position: relative;
-    padding-bottom: 19px;
-    font-size: 14px;
+    padding-bottom: 1.188rem;
+    font-size: 0.875rem;
     font-weight: 300;
 
     @include respond-to('phone') {
-      padding-bottom: 15px;
+      padding-bottom: 0.9375rem;
+margin-left: 0rem;
       padding-left: 25%;
       padding-right: 25%;
-      margin-left: 0px;
+      
     }
-
-    // &:hover {
-    //   border-bottom: 2px solid $White;
-    //   padding-bottom: 27px;
-    // }
 
   }
 
@@ -92,14 +88,14 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -8px;
-    height: 2px;
+    bottom: -0.5rem;
+height: 0.125rem;
     background-color: $White;
     width: auto;
 
     @include respond-to('phone') {
-      bottom: 0px;
-      height: 4px;
+      bottom: 0rem;
+height: 0.25rem;
     }
   }
 
@@ -111,7 +107,7 @@
   background-color: $Alabaster;
 }
 .banner{
-
+//vh maybe issue : todo
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -123,12 +119,12 @@ text-align: center;
 
 position: relative;
 @include respond-to ('phone') {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 1rem;
+padding-bottom: 1rem;
 }
 @include respond-to ('tablet') {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 1.5rem;
+padding-bottom: 1.5rem;
 }
 
 &__image__bio {
@@ -140,6 +136,7 @@ position: relative;
 
 
 &__image__show {
+  //todo for the vh issue
   min-height: 60vh;
   background-image: url('../assets/Images/hero-shows.jpg');
   position: relative; 
@@ -153,17 +150,17 @@ position: relative;
 
   &__header {
     color: $White;
-    padding-left: 80px;
-    font-size: 60px;
+    padding-left: 5rem;
+font-size: 3.75rem;
     font-weight: 400;
 
     @include respond-to('phone') {
-      font-size: 24px;
-      padding-left: 16px;
+      font-size: 1.5rem;
+padding-left: 1rem;
       font-weight: 700;
     }
     @include respond-to('tablet') {
-      padding-left: 36px;
+      padding-left: 2.25rem;
       font-weight: 700;
     }
   }
@@ -183,22 +180,22 @@ position: relative;
       display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 1.25rem;
 
     }
 
     &__text{
       color: $White;
-      font-size: 24px;
-      font-weight: 400;
-      padding-left: 80px;
+      font-size: 1.5rem;
+font-weight: 400;
+padding-left: 5rem;
       @include respond-to('phone') {
-        padding-left: 16px;
-        font-size: 14px;
+        padding-left: 1rem;
+font-size: 0.875rem;
       }
       @include respond-to('tablet') {
-        padding-left: 36px;
-        font-size: 24px;
+        padding-left: 2.25rem;
+        font-size: 1.5rem;
       }
 
     }
@@ -210,17 +207,17 @@ position: relative;
 
 
 .photo__image {
-
+//todo
   &__header {
     text-align: left;
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 2rem;
-    font-weight: 400;
+    font-size: 2.25rem;
+
+margin-bottom: 2rem;
+font-weight: 400;
 
     @include respond-to('phone') {
-      padding-left: 16px;
-      padding-right: 16px;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
 
@@ -232,10 +229,10 @@ position: relative;
     gap: 1rem;
 
     @include respond-to('phone') {
-      padding-left: 16px;
-      padding-right: 16px;
+      padding-left: 1rem;
+      padding-right: 1rem;
       flex-direction: column;
-      padding-bottom: 24px;
+      padding-bottom: 1.5rem;
     }
 
   }
@@ -244,7 +241,7 @@ position: relative;
     max-width: calc(33.333% - 1rem);
     height: auto;
 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 
     &:hover {
@@ -252,6 +249,8 @@ position: relative;
     }
 
     @include respond-to('phone') {
+
+      //todo check for white space
       max-width: calc(100%);
     }
 
@@ -263,13 +262,13 @@ position: relative;
 .soundcloud-embed{
   width: 40%; 
   @include respond-to ('phone') {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     width: 100%; 
   }
   @include respond-to ('tablet') {
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
     width: 100%; 
   }
 }
@@ -281,14 +280,14 @@ position: relative;
   padding: 1rem 5rem;
 
   @include respond-to ('phone') {
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 0px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
   }
 
   @include respond-to ('tablet') {
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 
   &__heading {
@@ -299,6 +298,7 @@ position: relative;
   }
 
   &__image {
+    //todo check with vh
     width: 100%;
     min-width: 85vh;
     height: auto;
@@ -310,7 +310,7 @@ position: relative;
   }
 
   &__text {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: $BandSite-Black;
     margin-bottom: 1rem;
     line-height: 1.6;
@@ -321,13 +321,13 @@ position: relative;
       display: block;
       text-align: left;
       color: $BandSite-Black;
-      font-size: 14px;
+      font-size: 0.875rem;
       font-weight: 600;
 
       margin-top: 0.7rem;
 
       @include respond-to('phone') {
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 400;
 
       }
@@ -341,18 +341,18 @@ position: relative;
   padding: 1rem 5rem;
 
   @include respond-to('phone') {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
   }
 
   @include respond-to('tablet') {
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 
   &__heading {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: $BandSite-Black;
     margin-bottom: .8rem;
     text-align: left;
@@ -368,7 +368,7 @@ position: relative;
     margin: 0 auto;
     padding: 1rem 0;
     display: flex;
-    gap: 14px;
+    gap: 0.875rem;
 
     @include respond-to('phone') {
       flex-direction: column;
@@ -377,7 +377,7 @@ position: relative;
   }
 
   &__text {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: $BandSite-Black;
     line-height: 1.6;
     text-align: left;
@@ -397,47 +397,47 @@ position: relative;
   align-items: center;
 
   &__heading {
-    font-size: 36px;
+    font-size: 2.25rem;
     color: $BandSite-Black;
     margin-bottom: 1.5rem;
     font-weight: 500;
     margin-top: 1.5rem;
-    padding-left: 80px;
+    padding-left: 5rem;
 
     @include respond-to('phone') {
-      padding-left: 16px;
-      padding-right: 16px;
-      padding-top: 24px;
-      padding-bottom: 16px;
-      margin: 0px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
+      margin: 0rem;
     }
 
     @include respond-to('tablet') {
-      padding-left: 36px;
-      padding-right: 36px;
+      padding-left: 2.25rem;
+      padding-right: 2.25rem;
     }
   }
 }
 
 .main__para__section {
   text-align: center;
-  padding-left: 80px;
-  padding-right: 80px;
-  padding-bottom: 60px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 3.75rem;
 
   @include respond-to('phone') {
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-bottom: 0rem;
   }
 
   @include respond-to('tablet') {
-    padding-left: 36px;
-    padding-right: 36px;
-    padding-bottom: 36px
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-bottom: 2.25rem;
   }
 
-
+}
 
 
 
@@ -446,17 +446,17 @@ position: relative;
   background: $BandSite-Black;
   color: $White;
   padding: 2rem 0;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 5rem;
+  padding-right: 5rem;
 
   @include respond-to('phone') {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 1rem;
+    padding-right: 1rem;    
   }
 
   @include respond-to('tablet') {
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;    
   }
 
 
@@ -473,7 +473,7 @@ position: relative;
 
   &__title {
     text-align: left;
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 400;
   }
 
@@ -490,18 +490,18 @@ position: relative;
     &__social {
       display: flex;
       justify-content: space-evenly;
-      gap: 63px;
+      gap: 3.9375rem;
       align-items: center;
 
       @include respond-to('phone') {
         flex-direction: column;
-        gap: 24px;
+        gap: 1.5rem;
         align-items: normal;
       }
     }
 
     &___text {
-      font-size: 24px;
+      font-size: 1.5px;
       font-weight: 300;
 
     }
@@ -522,8 +522,8 @@ position: relative;
     }
 
     &__value {
-      min-height: 12px;
-      height: 25px;
+      min-height: 0.75rem;
+      height: 1.563rem;
 
       @include respond-to('phone') {
         min-width: calc(150%);
@@ -542,17 +542,16 @@ position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    
-    gap: 63px;
-    padding-top: 40px;
+    gap: 3.938rem;
+    padding-top: 2.5rem;
 
     @include respond-to('phone') {
       flex-wrap: wrap;
-      gap: 0px;
+      gap: 0rem;
     }
 
     @include respond-to('tablet') {
-      gap: 24px;
+      gap: 1.5rem;
     }
 
     &__value {
@@ -564,7 +563,7 @@ position: relative;
     }
 
     &__text {
-      font-size: 14px;
+      font-size: 0.875rem;
       font-weight: 300;
 
       span {
@@ -573,7 +572,7 @@ position: relative;
     }
 
     &__alig {
-      padding-bottom: 20px;
+      padding-bottom: 1.25rem;
     }
 
   }
@@ -585,9 +584,9 @@ position: relative;
 }
 
 .comment-section {
-  max-width: 600px;
+  max-width: 37.5rem;
   margin: 0 auto;
-  padding: 20px;
+  padding: 1.25rem;
 
 &__form{
   display: flex;
@@ -595,65 +594,65 @@ position: relative;
 }
 
 &__avatar{
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
   background-image: url('../assets/Images/Mohan-muruge.jpg');
   border-radius: 50%;
-  margin-top:16px;
-  margin-right: 10px;
+  margin-top:1rem;
+  margin-right: 0.625rem;
   background-size: cover;
   background-position: center; 
   background-repeat: no-repeat; 
   @include respond-to('phone') {
-    min-width: 36px;
-    min-width: 36px;
+    min-width: 2.25rem;
+    min-width: 2.25rem;
   }
 
 }
   &__title {
     text-align: left;
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 400;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 5rem;
+    padding-right: 5rem;
 
     @include respond-to('phone') {
-      padding-left: 16px;
-      padding-right: 16px;
-      font-size: 24px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 1.5rem;
     }
     
   }
 }
 
 .comment-form {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   text-align: right;
 
   &__input{
-    min-height: 48px;
+    min-height: 3rem;
     width: 100%;
-    padding: 16px;
-    margin-bottom: 10px;
+    padding: 1rem;
+    margin-bottom: 0.626rem;
     border: 1px solid $Mercury;
     outline-color:$BandSite-Black;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     background: $Alabaster;
   }
   &__textarea {
     width: 100%;
-    padding: 16px;
-    margin-bottom: 10px;
-    border: 1px solid $Mercury;
+    padding: 1rem;
+    margin-bottom: 0.625rem;
+    border: 0.063rem solid $Mercury;
     outline-color:$BandSite-Black;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     background: $Alabaster;
   }
- 
+ //todo
   &__input,
   &__textarea{
     &.error {
-      outline: 2px solid red; 
+      outline: 0.125rem solid $Error; 
     }
     
   }
@@ -662,24 +661,24 @@ position: relative;
 
   &__label{
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 400;
-    color: #AFAFAF;
+    color: $Silver;
     float:left;
-    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
   }
 
   &__button {
     width: 30%;
-    padding: 10px;
-    background-color: black;
-    color: white;
+    padding: 0.625rem;
+    background-color: $BandSite-Black;
+    color: $White;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     cursor: pointer;
 
     &:hover {
-      background-color: #333;
+      background-color: $BandSite-DarkBlack;
     }
   }
 }
@@ -692,24 +691,24 @@ position: relative;
 .comment {
   display: flex;
   align-items: flex-start;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-top: 1px solid $Mercury;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-top: 0.063rem solid $Mercury;
 
   &:last-child {
-    border-bottom: 1px solid $Mercury;
+    border-bottom: 0.063rem solid $Mercury;
   }
 
   &__avatar {
-    width: 48px;
-    height: 48px;
-    background-color: #ddd; 
+    width: 3rem;
+    height: 3rem;
+    background-color: $Mercury; 
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 0.625rem;
   }
 
   &__body {
-    border-radius: 4px;
+    border-radius: 0.25rem;
     flex-grow: 1;
     width: 80%;
   }
@@ -717,26 +716,26 @@ position: relative;
   &__name-date {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
   }
 
   &__name {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
     color: $BandSite-Black;
   }
 
   &__date {
     color: $Silver;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   &__text {
     margin: 0;
     font-weight: 400;
     text-align: left;
-    font-size: 12px;
-    line-height: 22px;
+    font-size: 0.75;
+    line-height: 1.375rem;
     color: $BandSite-Black;
   }
 }
