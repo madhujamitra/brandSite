@@ -12,7 +12,6 @@
   margin: 0px;
   padding: 0;
   box-sizing: border-box;
-  
   font-family: "Avenir Next Pro Lt", sans-serif;
   
 }
@@ -80,6 +79,11 @@ margin-left: 0rem;
       
     }
 
+    // &:hover {
+    //   border-bottom: 2px solid $White;
+    //   padding-bottom: 27px;
+    // }
+
   }
 
 
@@ -89,17 +93,15 @@ margin-left: 0rem;
     left: 0;
     right: 0;
     bottom: -0.5rem;
-height: 0.125rem;
+    height: 0.125rem;
     background-color: $White;
     width: auto;
 
     @include respond-to('phone') {
       bottom: 0rem;
-height: 0.25rem;
+      height: 0.25rem;
     }
   }
-
-
 
 
 }
@@ -116,15 +118,14 @@ min-height: 60vh;
 display: flex;
 align-items: center;
 text-align: center;
-
 position: relative;
 @include respond-to ('phone') {
   padding-top: 1rem;
-padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 @include respond-to ('tablet') {
   padding-top: 1.5rem;
-padding-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 &__image__bio {
@@ -136,7 +137,7 @@ padding-bottom: 1.5rem;
 
 
 &__image__show {
-  //todo for the vh issue
+//todo for the vh issue
   min-height: 60vh;
   background-image: url('../assets/Images/hero-shows.jpg');
   position: relative; 
@@ -151,12 +152,12 @@ padding-bottom: 1.5rem;
   &__header {
     color: $White;
     padding-left: 5rem;
-font-size: 3.75rem;
+    font-size: 3.75rem;
     font-weight: 400;
 
     @include respond-to('phone') {
       font-size: 1.5rem;
-padding-left: 1rem;
+      padding-left: 1rem;
       font-weight: 700;
     }
     @include respond-to('tablet') {
@@ -181,17 +182,16 @@ padding-left: 1rem;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.25rem;
-
     }
 
     &__text{
       color: $White;
       font-size: 1.5rem;
-font-weight: 400;
-padding-left: 5rem;
+      font-weight: 400;
+      padding-left: 5rem;
       @include respond-to('phone') {
         padding-left: 1rem;
-font-size: 0.875rem;
+        font-size: 0.875rem;
       }
       @include respond-to('tablet') {
         padding-left: 2.25rem;
@@ -212,8 +212,8 @@ font-size: 0.875rem;
     text-align: left;
     font-size: 2.25rem;
 
-margin-bottom: 2rem;
-font-weight: 400;
+    margin-bottom: 2rem;
+    font-weight: 400;
 
     @include respond-to('phone') {
       padding-left: 1rem;
@@ -225,7 +225,6 @@ font-weight: 400;
   &__alig {
     display: flex;
     flex-wrap: wrap;
-
     gap: 1rem;
 
     @include respond-to('phone') {
@@ -249,9 +248,8 @@ font-weight: 400;
     }
 
     @include respond-to('phone') {
-
-      //todo check for white space
-      max-width: calc(100%);
+  //todo check for white space
+        max-width: calc(100%);
     }
 
 
@@ -298,8 +296,9 @@ font-weight: 400;
   }
 
   &__image {
-    //todo check with vh
-    width: 100%;
+  
+     //todo check with vh
+     width: 100%;
     min-width: 85vh;
     height: auto;
     margin-bottom: 1.5rem;
@@ -343,7 +342,6 @@ font-weight: 400;
   @include respond-to('phone') {
     padding-left: 1rem;
     padding-right: 1rem;
-
   }
 
   @include respond-to('tablet') {
@@ -451,7 +449,7 @@ font-weight: 400;
 
   @include respond-to('phone') {
     padding-left: 1rem;
-    padding-right: 1rem;    
+    padding-right: 1rem;  
   }
 
   @include respond-to('tablet') {
@@ -501,7 +499,7 @@ font-weight: 400;
     }
 
     &___text {
-      font-size: 1.5px;
+      font-size: 1.5rem;
       font-weight: 300;
 
     }
@@ -542,6 +540,7 @@ font-weight: 400;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    
     gap: 3.938rem;
     padding-top: 2.5rem;
 
