@@ -29,9 +29,14 @@ const showsTitle = document.createElement('h3');
     headerLocationEl.classList.add('shows__listings__location', 'shows__listings__header-location');
     headerLocationEl.textContent = 'LOCATION';
 
+    const headerLocationElValue = document.createElement('div');
+    headerLocationElValue.classList.add('shows__listings__location', 'shows__listings__header-location');
+    headerLocationElValue.textContent = '';
+
     headerRowEl.appendChild(headerDateEl);
     headerRowEl.appendChild(headerVenueEl);
     headerRowEl.appendChild(headerLocationEl);
+    headerRowEl.appendChild(headerLocationElValue);
 
     showsListContainer.appendChild(headerRowEl);
   };
@@ -50,6 +55,7 @@ const showsTitle = document.createElement('h3');
     const showDateElheader = document.createElement('div');
     const showVenueElheader = document.createElement('div');
     const showLocationElheader = document.createElement('div');
+
     const showDateEl = document.createElement('div');
     const showVenueEl = document.createElement('div');
     const showLocationEl = document.createElement('div');
@@ -98,7 +104,7 @@ const showsTitle = document.createElement('h3');
     
     containerVal.appendChild(showEl);
   }
-//call the value here using asyn and converting intion async function.
+
   const buildShowsList = (showsArray) => {
    
     while (showsListContainer.children.length > 1) {

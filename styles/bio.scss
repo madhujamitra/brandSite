@@ -10,7 +10,7 @@
 }
 
 * {
-  margin: 0px;
+  margin: 0rem;
   padding: 0;
   box-sizing: border-box;
   font-family: "Avenir Next Pro Lt", sans-serif;
@@ -35,6 +35,7 @@
     padding-right: 0rem;
     padding-bottom: 0rem;
   }
+
   @include respond-to('largePhone') {
     justify-content: center;
     flex-direction: column;
@@ -53,6 +54,7 @@
     @include respond-to('phone') {
       font-size: 2.25rem;
     }
+
     @include respond-to('largePhone') {
       font-size: 2.25rem;
     }
@@ -65,6 +67,7 @@
       justify-content: space-evenly;
 
     }
+
     @include respond-to('largePhone') {
       width: 100%;
       display: flex;
@@ -90,7 +93,8 @@
       padding-right: 20%;
 
     }
-      @include respond-to('largePhone') {
+
+    @include respond-to('largePhone') {
       padding-bottom: 0.9375rem;
       margin-left: 0rem;
       padding-left: 21%;
@@ -116,6 +120,7 @@
           bottom: 0rem;
           height: 0.25rem;
         }
+
         @include respond-to('largePhone') {
           bottom: 0rem;
           height: 0.25rem;
@@ -125,80 +130,76 @@
 
 
   }
-
-
-
-
 }
-.photo_para{
+
+.photo_para {
   background-color: $Alabaster;
 }
-.banner{
-//vh maybe issue : todo
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-width: 100%;
-min-height: 60vh;
-display: flex;
-align-items: center;
-text-align: center;
-position: relative;
-@include respond-to ('phone') {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-@include respond-to ('largePhone') {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-@include respond-to ('tablet') {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
 
-&__image__bio {
-  background-image: url('../assets/Images/hero-bio.jpg');
-  position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba($BandSite-Black, 0.5);
-    z-index: 1; 
-  }
-}
-
-
-
-
-&__image__show {
-//todo for the vh issue
+.banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 60vh;
-  background-image: url('../assets/Images/hero-shows.jpg');
-  position: relative; 
-  background-position: top;
-  text-align: left;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba($BandSite-Black, 0.5);
-    z-index: 1; 
-  }
-}
-&__content {
+  display: flex;
+  align-items: center;
+  text-align: center;
   position: relative;
-  z-index: 2;
-}
+
+  @include respond-to ('phone') {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  @include respond-to ('largePhone') {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  @include respond-to ('tablet') {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &__image__bio {
+    background-image: url('../assets/Images/hero-bio.jpg');
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba($BandSite-Black, 0.5);
+      z-index: 1;
+    }
+  }
+
+  &__image__show {
+    min-height: 60vh;
+    background-image: url('../assets/Images/hero-shows.jpg');
+    position: relative;
+    background-position: top;
+    text-align: left;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba($BandSite-Black, 0.5);
+      z-index: 1;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
 
   &__header {
     color: $White;
@@ -213,47 +214,55 @@ position: relative;
       padding-left: 1rem;
       font-weight: 700;
     }
+
     @include respond-to ('largePhone') {
       font-size: 1.5rem;
       padding-left: 1rem;
       font-weight: 700;
     }
+
     @include respond-to('tablet') {
       padding-left: 2.25rem;
       font-weight: 700;
     }
   }
-  &__show{
-    gap: 10px;
+
+  &__show {
+    gap: 0.625rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
     @include respond-to('phone') {
       align-items: flex-start;
       flex-direction: column;
     }
+
     @include respond-to('largePhone') {
       align-items: flex-start;
       flex-direction: column;
     }
+
     @include respond-to('tablet') {
       align-items: flex-start;
       flex-direction: column;
     }
-    &__group{
+
+    &__group {
       display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.25rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.25rem;
     }
 
-    &__text{
+    &__text {
       color: $White;
       font-size: 1.5rem;
       font-weight: 400;
       padding-left: 5rem;
       position: relative;
-    z-index: 2;
+      z-index: 2;
+
       @include respond-to('phone') {
         padding-left: 1rem;
         font-size: 0.875rem;
@@ -263,6 +272,7 @@ position: relative;
         padding-left: 1rem;
         font-size: 0.875rem;
       }
+
       @include respond-to('tablet') {
         padding-left: 2.25rem;
         font-size: 1.5rem;
@@ -273,11 +283,7 @@ position: relative;
 
 }
 
-
-
-
 .photo__image {
-//todo
   &__header {
     text-align: left;
     font-size: 2.25rem;
@@ -288,6 +294,7 @@ position: relative;
       padding-left: 1rem;
       padding-right: 1rem;
     }
+
     @include respond-to('largePhone') {
       padding-left: 1rem;
       padding-right: 1rem;
@@ -306,6 +313,7 @@ position: relative;
       flex-direction: column;
       padding-bottom: 1.5rem;
     }
+
     @include respond-to('largePhone') {
       padding-left: 1rem;
       padding-right: 1rem;
@@ -318,7 +326,6 @@ position: relative;
   &__value {
     max-width: calc(33.333% - 1rem);
     height: auto;
-
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 
@@ -327,37 +334,40 @@ position: relative;
     }
 
     @include respond-to('phone') {
-  //todo check for white space
-        max-width: calc(100%);
+      max-width: calc(100%);
     }
+
     @include respond-to('largePhone') {
-      //todo check for white space
-            max-width: calc(100%);
-        }
+      max-width: calc(100%);
+    }
 
 
   }
 
 
 }
-.soundcloud-embed{
-  width: 40%; 
+
+.soundcloud-embed {
+  width: 40%;
   position: relative;
-    z-index: 2;
+  z-index: 2;
+
   @include respond-to ('phone') {
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 100%; 
+    width: 100%;
   }
+
   @include respond-to ('largePhone') {
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 100%; 
+    width: 100%;
   }
+
   @include respond-to ('tablet') {
     padding-left: 2.25rem;
     padding-right: 2.25rem;
-    width: 100%; 
+    width: 100%;
   }
 }
 
@@ -372,6 +382,7 @@ position: relative;
     padding-right: 1rem;
     padding-top: 1rem;
   }
+
   @include respond-to ('largePhone') {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -391,19 +402,18 @@ position: relative;
   }
 
   &__image {
-  
-     //todo check with vh
-     width: 100%;
-    min-width: 85vh;
+    width: 100%;
     height: auto;
     margin-bottom: 1.5rem;
 
     @include respond-to('phone') {
       min-width: calc(50% - 1rem);
     }
+
     @include respond-to('largePhone') {
       min-width: calc(50% - 1rem);
     }
+
     @include respond-to('tablet') {
       min-width: calc(33% - 1rem);
     }
@@ -430,6 +440,7 @@ position: relative;
         font-size: 1.5rem;
         font-weight: 400;
       }
+
       @include respond-to('largePhone') {
         font-size: 1.5rem;
         font-weight: 400;
@@ -447,6 +458,7 @@ position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
   @include respond-to('largePhone') {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -467,6 +479,7 @@ position: relative;
     @include respond-to('phone') {
       font-weight: 300;
     }
+
     @include respond-to('largePhone') {
       font-weight: 300;
     }
@@ -481,6 +494,7 @@ position: relative;
     @include respond-to('phone') {
       flex-direction: column;
     }
+
     @include respond-to('largePhone') {
       flex-direction: column;
     }
@@ -523,6 +537,7 @@ position: relative;
       padding-bottom: 1rem;
       margin: 0rem;
     }
+
     @include respond-to('largePhone') {
       padding-left: 1rem;
       padding-right: 1rem;
@@ -549,6 +564,7 @@ position: relative;
     padding-right: 0rem;
     padding-bottom: 0rem;
   }
+
   @include respond-to('largePhone') {
     padding-left: 0rem;
     padding-right: 0rem;
@@ -575,29 +591,31 @@ position: relative;
 
   @include respond-to('phone') {
     padding-left: 1rem;
-    padding-right: 1rem;  
+    padding-right: 1rem;
   }
+
   @include respond-to('largePhone') {
     padding-left: 1rem;
-    padding-right: 1rem;  
+    padding-right: 1rem;
   }
 
   @include respond-to('tablet') {
     padding-left: 2.25rem;
-    padding-right: 2.25rem;    
+    padding-right: 2.25rem;
   }
-
-
 
   &__part {
     display: flex;
     justify-content: space-between;
-    
+
     @include respond-to('phone') {
       flex-direction: column;
+      padding-bottom: 1rem;
     }
+
     @include respond-to('largePhone') {
       flex-direction: column;
+      padding-bottom: 1rem;
     }
 
   }
@@ -629,11 +647,13 @@ position: relative;
         gap: 1.5rem;
         align-items: normal;
       }
+
       @include respond-to('largePhone') {
         flex-direction: column;
         gap: 1.5rem;
         align-items: normal;
       }
+
       @include respond-to('tablet') {
         gap: 2rem;
       }
@@ -651,6 +671,7 @@ position: relative;
   &__contact-icons {
     display: flex;
     gap: 3rem;
+
     @include respond-to('tablet') {
       gap: 2rem;
     }
@@ -672,11 +693,12 @@ position: relative;
         min-width: calc(150%);
         height: auto;
       }
+
       @include respond-to('largePhone') {
         min-width: calc(150%);
         height: auto;
       }
-  
+
     }
 
   }
@@ -690,7 +712,7 @@ position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    
+
     gap: 3.938rem;
     padding-top: 2.5rem;
 
@@ -699,11 +721,13 @@ position: relative;
       flex-wrap: wrap;
       gap: 0rem;
     }
+
     @include respond-to('largePhone') {
       flex-direction: column;
       flex-wrap: wrap;
       gap: 0rem;
     }
+
     @include respond-to('tablet') {
       gap: 1.5rem;
     }
@@ -731,7 +755,8 @@ position: relative;
 
   }
 }
-.comment__section__para{
+
+.comment__section__para {
   width: 100%;
   padding: 2rem 0;
 
@@ -742,31 +767,34 @@ position: relative;
   margin: 0 auto;
   padding: 1.25rem;
 
-&__form{
-  display: flex;
-  flex-direction: row;
-}
-
-&__avatar{
-  width: 3rem;
-  height: 3rem;
-  background-image: url('../assets/Images/Mohan-muruge.jpg');
-  border-radius: 50%;
-  margin-top:1rem;
-  margin-right: 0.625rem;
-  background-size: cover;
-  background-position: center; 
-  background-repeat: no-repeat; 
-  @include respond-to('phone') {
-    min-width: 2.25rem;
-    min-width: 2.25rem;
-  }
-  @include respond-to('largePhone') {
-    min-width: 2.25rem;
-    min-width: 2.25rem;
+  &__form {
+    display: flex;
+    flex-direction: row;
   }
 
-}
+  &__avatar {
+    width: 3rem;
+    height: 3rem;
+    background-image: url('../assets/Images/Mohan-muruge.jpg');
+    border-radius: 50%;
+    margin-top: 1rem;
+    margin-right: 0.625rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include respond-to('phone') {
+      min-width: 2.25rem;
+      min-width: 2.25rem;
+    }
+
+    @include respond-to('largePhone') {
+      min-width: 2.25rem;
+      min-width: 2.25rem;
+    }
+
+  }
+
   &__title {
     text-align: left;
     font-size: 2.25rem;
@@ -779,12 +807,13 @@ position: relative;
       padding-right: 1rem;
       font-size: 1.5rem;
     }
+
     @include respond-to('largePhone') {
       padding-left: 1rem;
       padding-right: 1rem;
       font-size: 1.5rem;
     }
-    
+
   }
 }
 
@@ -792,42 +821,43 @@ position: relative;
   margin-bottom: 1.875rem;
   text-align: right;
 
-  &__input{
+  &__input {
     min-height: 3rem;
     width: 100%;
     padding: 1rem;
     margin-bottom: 0.626rem;
-    border: 1px solid $Mercury;
-    outline-color:$BandSite-Black;
+    border: 0.063rem solid $Mercury;
+    outline-color: $BandSite-Black;
     border-radius: 0.25rem;
     background: $Alabaster;
   }
+
   &__textarea {
     width: 100%;
     padding: 1rem;
     margin-bottom: 0.625rem;
     border: 0.063rem solid $Mercury;
-    outline-color:$BandSite-Black;
+    outline-color: $BandSite-Black;
     border-radius: 0.25rem;
     background: $Alabaster;
   }
- //todo
+
   &__input,
-  &__textarea{
+  &__textarea {
     &.error {
-      outline: 0.125rem solid $Error; 
+      outline: 0.125rem solid $Error;
     }
-    
+
   }
 
 
 
-  &__label{
+  &__label {
     text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: 400;
     color: $Silver;
-    float:left;
+    float: left;
     margin-bottom: 0.25rem;
   }
 
@@ -865,7 +895,7 @@ position: relative;
   &__avatar {
     width: 3rem;
     height: 3rem;
-    background-color: $Mercury; 
+    background-color: $Mercury;
     border-radius: 50%;
     margin-right: 0.625rem;
   }
