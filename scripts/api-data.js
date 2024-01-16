@@ -26,7 +26,6 @@ async function postRequest(newComment){
     });
     return response; 
   } catch(error){
-    console.error("Error in postRequest:", error);
     throw error;
   }
 }

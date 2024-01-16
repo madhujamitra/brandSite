@@ -12,6 +12,9 @@
   @include respond-to('phone') {
     flex-direction: column;
   }
+  @include respond-to('largePhone') {
+    flex-direction: column;
+  }
 
   @include respond-to('tablet') {
     flex-direction: column;
@@ -28,6 +31,11 @@
     font-size: 1.5rem;
 
     @include respond-to('phone') {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      text-align: left;
+    }
+    @include respond-to('largePhone') {
       padding-left: 1rem;
       padding-right: 1rem;
       text-align: left;
@@ -76,6 +84,10 @@
       @include respond-to('phone') {
         display: none;
       }
+      
+        @include respond-to('largePhone') {
+          display: none;
+        }
     }
   }
 
@@ -87,6 +99,13 @@
     border-bottom: 0.063rem solid #ccc;
 
     @include respond-to('phone') {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      gap: 1rem;
+    }
+    @include respond-to('largePhone') {
       flex-direction: column;
       align-items: flex-start;
       padding-left: 1rem;
@@ -125,6 +144,9 @@
     @include respond-to('phone') {
       padding: 0.5rem 33%;
     }
+    @include respond-to('largePhone') {
+      padding: 0.5rem 33%;
+    }
 
     &:hover {
       background-color: $BandSite-DarkBlack;
@@ -144,6 +166,9 @@
   display: none;
 
   @include respond-to('phone') {
+    display: block;
+  }
+  @include respond-to('largePhone') {
     display: block;
   }
 }

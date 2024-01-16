@@ -10,7 +10,6 @@ const showsTitle = document.createElement('h3');
   showsListingsContainer.insertBefore(showsTitle, showsListingsContainer.firstChild);
 
   //table for content
-
   const showsListContainer = document.querySelector('.shows__listings__list');
 
   //for heading
@@ -18,17 +17,16 @@ const showsTitle = document.createElement('h3');
     const headerRowEl = document.createElement('li');
     headerRowEl.classList.add('shows__listings__items');
 
-    // Create and append the header elements => ,'shows__listings__header-date' =>, 'shows__listings__header-venue'
     const headerDateEl = document.createElement('div');
-    headerDateEl.classList.add('shows__listings__date');
+    headerDateEl.classList.add('shows__listings__date', 'shows__listings__header-date');
     headerDateEl.textContent = 'DATE';
 
     const headerVenueEl = document.createElement('div');
-    headerVenueEl.classList.add('shows__listings__venue');
+    headerVenueEl.classList.add('shows__listings__venue', 'shows__listings__header-venue');
     headerVenueEl.textContent = 'VENUE';
 
     const headerLocationEl = document.createElement('div');
-    headerLocationEl.classList.add('shows__listings__location');
+    headerLocationEl.classList.add('shows__listings__location', 'shows__listings__header-location');
     headerLocationEl.textContent = 'LOCATION';
 
     headerRowEl.appendChild(headerDateEl);
@@ -39,8 +37,7 @@ const showsTitle = document.createElement('h3');
   };
 
   //for the table
-
-  const addShowToDom = (show, container) => {
+  const addShowToDom = (showVal, containerVal) => {
     const showEl = document.createElement('li');
     showEl.classList.add('shows__listings__items');
 
@@ -73,9 +70,9 @@ const showsTitle = document.createElement('h3');
     showVenueElheader.textContent = 'VENUE';
     showLocationElheader.textContent = 'LOCATION';
     
-    showDateEl.textContent = formatTimestamp(show.date);
-    showVenueEl.textContent = show.place;
-    showLocationEl.textContent = show.location;
+    showDateEl.textContent = formatTimestamp(showVal.date);
+    showVenueEl.textContent = showVal.place;
+    showLocationEl.textContent = showVal.location;
     ticketLinkEl.textContent = 'BUY TICKETS';
     ticketLinkEl.href = '#';
     
@@ -90,7 +87,7 @@ const showsTitle = document.createElement('h3');
 
     showEl.addEventListener('click', () => {
     
-      const activeShowEls = container.querySelectorAll('.shows__listings__items--active');
+      const activeShowEls = containerVal.querySelectorAll('.shows__listings__items--active');
       activeShowEls.forEach((el) => {
         
         el.classList.remove('shows__listings__items--active');
@@ -99,7 +96,7 @@ const showsTitle = document.createElement('h3');
       showEl.classList.add('shows__listings__items--active');
     });
     
-    container.appendChild(showEl);
+    containerVal.appendChild(showEl);
   }
 //call the value here using asyn and converting intion async function.
   const buildShowsList = (showsArray) => {
@@ -131,7 +128,6 @@ const showsTitle = document.createElement('h3');
         }
     }
 }
-
 
 loadAndDisplayShows();
 addHeaderRowToDom();
