@@ -75,16 +75,17 @@ document.addEventListener('DOMContentLoaded', async function() {
       const commentTextarea = commentForm.querySelector('.comment-form__textarea');
       const currentDate = new Date().toLocaleDateString('en-US');
       const inputs = commentForm.querySelectorAll('.comment-form__input, .comment-form__textarea');
-//error frild: still working on it : todo
+    
+      //error field: still working on it : todo
       inputs.forEach(input => {
-        if (input.required && input.value.trim() === '') {
-         
-          input.classList.add('error');
+        if (!input.checkValidity()) {
+          nameInput.classList.add('error');
         } else {
-         
-          input.classList.remove('error');
+          nameInput.classList.remove('error');
         }
       });
+
+  
 
 
    const newComment = {

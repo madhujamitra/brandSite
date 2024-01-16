@@ -807,9 +807,6 @@
   border-radius: 0.25rem;
   background: #FAFAFA;
 }
-.comment-form__input.error, .comment-form__textarea.error {
-  outline: 0.125rem solid #D22D2D;
-}
 .comment-form__label {
   text-transform: uppercase;
   font-size: 0.75rem;

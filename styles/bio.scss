@@ -841,15 +841,9 @@
     border-radius: 0.25rem;
     background: $Alabaster;
   }
+  
 
-  &__input,
-  &__textarea {
-    &.error {
-      outline: 0.125rem solid $Error;
-    }
-
-  }
-
+  
 
 
   &__label {
