@@ -1,6 +1,10 @@
-import { showValue } from "./api-data.js";
+import BandSiteApi from "./band-site-api.js";
 
 document.addEventListener('DOMContentLoaded', function() {
+
+  const apiKey = "770oedhweuifyuiwefuiwef88fd";
+  const bandSiteApi = new BandSiteApi(apiKey);
+
 
 //for heading shows
 const showsListingsContainer = document.querySelector('.shows__listings');
@@ -118,20 +122,11 @@ const showsTitle = document.createElement('h3');
 
   async function loadAndDisplayShows() {
     try {
-        const showsData = await showValue(); 
+        const showsData = await bandSiteApi.getShows(); 
         buildShowsList(showsData); 
     } catch (error) {
         console.error('Error fetching show data:', error);
-        if (error.response) {
-            console.error(error.response.data);
-            console.error(error.response.status);
-            console.error(error.response.headers);
-        } else if (error.request) {
-            
-        } else {
-           
-            console.error('Error', error.message);
-        }
+
     }
 }
 

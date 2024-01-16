@@ -1,12 +1,17 @@
-import { commentValue , postRequest } from "./api-data.js";
+import BandSiteApi from "./band-site-api.js";
 
 document.addEventListener('DOMContentLoaded', async function() {
+
+  const apiKey = "770oedhweuifyuiwefuiwef88fd";
+  const bandSiteApi = new BandSiteApi(apiKey);
+
+
  let comments;
   try{
-    const value = await commentValue();
+    const value = await bandSiteApi.getComments();
     comments = value.data;
   }catch(error){
-    console.log(error);
+    throw error;
   }
 
 
@@ -89,8 +94,8 @@ document.addEventListener('DOMContentLoaded', async function() {
       
 //for adding new comment to api and the we care fetching the value
       try{
-       await postRequest(newComment);
-        const updatedComments =  await commentValue();
+       await bandSiteApi.postComment(newComment);
+        const updatedComments =  await bandSiteApi.getComments();
         comments = updatedComments.data;
         renderComments();
 
